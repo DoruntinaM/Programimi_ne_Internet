@@ -1,0 +1,107 @@
+*
+	{
+		margin: 0px;
+		padding: 0px;
+	}
+
+body
+	{
+		font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+		font-size: 18px;
+		line-height: 18px;
+		background-color: #e9eaed;
+		color: #000;
+		width: 100%;
+
+	}
+
+#container
+	{
+		width: 1000px;
+		margin: 15px auto 0px auto;
+	}
+	
+
+#login-right
+	{
+		float: right;
+		width: 30%;
+	}
+
+#login-right h2 /*login*/
+	{
+		color: #fff;
+		text-shadow: 1px 1px 3px #000;
+		line-height: 50px;
+        
+	}
+
+#login-right button /*login butoni*/
+	{
+		font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+		font-size: 18px;
+		line-height: 18px;
+		border-radius: 5px;
+		border: 1px solid #888;
+		padding: 7px;
+		background-color:rgb(197, 52, 52);
+		cursor: pointer;
+        width: 300px;
+
+	}
+.login-margin
+	{
+		margin-top: 80px;
+        
+	}
+        
+
+.short-pass /*password*/
+	{
+		width: 300px;
+        background-color:white;
+	}
+#login-right input /*username*/
+	{
+		
+		font-family: Calibri;
+		font-size: 18px;
+		line-height: 18px;
+        border-radius: 5px;
+		border: 1px solid #888;
+		padding: 5px;
+		margin-bottom: 3px;
+        background-color: white;
+        
+		
+	}
+#login-left
+	{
+		float: left;
+		width: 60%;
+		height: 500px;
+	}
+	
+	
+#login-left p
+		{
+			color: #fff;
+			text-shadow: 1px 1px 5px #000;
+			font-size: 25px;
+			line-height: 35px;
+			text-align: center;
+		}
+		
+#login-left h1
+	{
+		color: #fff;
+		text-shadow: 1px 1px 3px #000;
+		font-size: 40px;
+		line-height: 60px;
+		text-align: center;
+		margin-top: 100px;
+	}
+.clear
+	{
+		clear: both;
+	}
