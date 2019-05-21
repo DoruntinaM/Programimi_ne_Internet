@@ -1,0 +1,122 @@
+*
+	{
+		margin: 0px;
+		padding: 0px;
+	}
+
+body
+	{
+		font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+		font-size: 18px;
+		line-height: 18px;
+		background-color: #e9eaed;
+		color: #000;
+		width: 100%;
+
+	}
+
+#container 
+	{
+		width: 1165px;
+		margin: 15px auto 0px auto;
+        
+	}
+	
+
+#signup-right
+	{
+		float: right;
+		width: 30%;
+	}
+
+#signup-right h2 /*sigup header*/
+	{
+		color: #fff;
+		text-shadow: 1px 1px 3px #000;
+		line-height: 50px;
+        
+        
+	}
+
+#signup-right button
+	{
+		font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+		font-size: 18px;
+		line-height: 18px;
+		border-radius: 5px;
+		border: 1px solid #888;
+		padding: 7px;
+		background-color:rgb(197, 52, 52);
+		cursor: pointer;
+        width: 350px;
+        
+        
+
+	}
+
+#signup-right input
+	{
+		
+		font-family: Calibri;
+		font-size: 18px;
+		line-height: 25px;
+        border-radius: 5px;
+		border: 1px solid #888;
+		padding: 7px;
+		margin-bottom: 5px;
+        background-color: white;
+        
+        
+		
+	}
+
+.long
+	{
+    
+	width: 350px;
+    
+	}
+
+#signup-left
+	{
+		float: left;
+		width: 60%;
+		height: 500px;
+	}
+	
+	
+#signup-left p
+		{
+			color: #fff;
+			text-shadow: 1px 1px 5px #000;
+			font-size: 25px;
+			line-height: 35px;
+			text-align: center;
+		}
+		
+#signup-left h1
+	{
+		color: #fff;
+		text-shadow: 1px 1px 3px #000;
+		font-size: 40px;
+		line-height: 60px;
+		text-align: center;
+		margin-top: 100px;
+        
+	}
+
+#passwordsignup{
+    font-family: Calibri;
+		font-size: 18px;
+		line-height: 25px;
+        border-radius: 5px;
+		border: 1px solid #888;
+		padding: 5px;
+		margin-bottom: 5px;
+        background-color: white;
+        
+}
+.clear
+	{
+		clear: both;
+	}
