@@ -1,0 +1,69 @@
+*{
+	margin:auto;
+	padding:auto;
+}
+header{
+    background-color: black;
+}
+#left-navheader {
+    float:left;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+#right-navheader {
+    float: right;
+}
+
+#right-navheader li {
+    display: inline-block;
+    margin: 10px;
+}
+
+#left-navheader li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.top{
+	width:100%;
+	background-color:black;
+	border-bottom:30px solid black;
+}
+.top div{
+	width:100%;
+	color:grey;
+	background-color:black;
+	padding:5px;
+	
+}
+
+.molecular{
+	width:100%;
+    color:white;
+	background-color:#282828;
+	border-bottom:4px solid #eb2d33;
+    
+}
+.molecular div{
+	width:100%;
+    color:white;
+	background-color:#282828;
+    padding-left: 2px;
+	padding:5px;
+	text-align:left;
+    border-bottom:10px solid #282828 ;
+}
+.molecular div table a{
+	padding:5px;
+	text-decoration:none;
+	color:white;
+	
+}
+.molecular div table a:hover{
+	color:#eb2d33;
+	
+}
+
