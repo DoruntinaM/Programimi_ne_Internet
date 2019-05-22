@@ -1,0 +1,38 @@
+Dikush e ka vizituar register.php
+Dikush e ka vizituar register.php
+Dikush e ka vizituar register.php
+Dikush e ka vizituar register.php
+INSERT INTO USERS VALUES('', '2a7ccc6aa93f8d4c38e988ded537cf433d57c4ac/31393a8602e9c15b788888478c82870c1e564d4d', '','')
+Error: 
+Dikush e ka vizituar register.php
+Dikush e ka vizituar register.php
+INSERT INTO USERS VALUES('', '961a363483051f989c170821c9ad321e0027fbee/f02802f7612db4a1da370b672e689571974a8503', '','')
+Error: 
+Dikush e ka vizituar register.php
+Dikush e ka vizituar register.php
+INSERT INTO USERS VALUES('', '7e1c5c3d77e2ad95e6cd394dd1969f542844d257/2846393f21b82720788ce2b921e66c44526d0c92', '','')
+Error: 
+Dikush e ka vizituar register.php
+Dikush e ka vizituar register.php
+INSERT INTO USERS VALUES('', 'd816213a9288ac4a2bea6b3f65dc0a18772ceea1/c8a16bdaea57929cdb3894a7a8d5290d8ae68f86', '','')
+Error: 
+Dikush e ka vizituar register.php
+Dikush e ka vizituar register.php
+Dikush e ka vizituar register.php
+INSERT INTO USERS VALUES('EndritBajrami', '994a8357cce14923e1460bd5a9b12dcdf557ea75/5235e8391feb160d35b6c6bebace59636ca73c8d', 'endrit','bajrami')
+Error: 
+Dikush e ka vizituar register.php
+Dikush e ka vizituar register.php
+INSERT INTO USERS VALUES('EndritBajra', '9af2b0f869d3ed662ae2baa866e50ab8f4ef6bef/182df63e1bf9b4b3cac1d34e5bf93e045214cdbe', 'endrit','bajrami')
+Error: 
+Dikush e ka vizituar register.php
+Dikush e ka vizituar register.php
+INSERT INTO USERS VALUES('EndritBajrami', '2842b8817f952f4d3e1c3e004c395a596cf59261/f9f439eb8bb8d07500aa04af9babdec216f62630', 'endrit','bajrami')
+Error: 
+Login attempt nga: EndritBajrami
+Login attempt nga: EndritBajrami
+Login valid
+Login attempt nga: as
+Username nuk ekziston
+Login attempt nga: EndritBajrami
+Login valid
