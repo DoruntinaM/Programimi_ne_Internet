@@ -1,7 +1,7 @@
 <?php 
 // get values from form in login.php file
-$username = $_POST['user'];
-$password = $_POST['pass'];
+$username = $_POST['username'];
+$password = $_POST['password'];
 
 // to prevent mysql injections 
 $username = stripcslashes($username);
@@ -21,6 +21,6 @@ $row = mysql_fetch_array($result);
     if ($row['username']== $username && $row['password']==$password){
         echo "Login success !!! Welcome ".$row['username'];
     }else {
-        echo "Failed to login!"
+        echo "Failed to login!";
     }
 ?>
