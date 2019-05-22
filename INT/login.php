@@ -82,11 +82,13 @@
 			    <div id="login-right">
 				<div class="login-margin"></div>
 				
-				<form name="Form" method="post" onlogin="return myfunction()" autocomplete="on"> 
+				<form action ="loginprocess.php" method="POST"  autocomplete="on"> 
                                 <h2>Login</h2> 
-                                 <input class="long" name="username" type="text" placeholder="Username" required  autofocus >
-                                    <input class="short-pass" name="password" type="password" placeholder="Password" required >       
-                               <button class="btn-login" onclick="myfunction()" type="submit" name="login">Login</button>
+                                
+                                <input class="long" name="username" type="text" placeholder="Username" required  autofocus >
+                                <input class="short-pass" name="password" type="password" placeholder="Password" required >       
+                                
+                                <button class="btn-login"  type="submit" name="login">Login</button>
                                
                              
                             </form>
