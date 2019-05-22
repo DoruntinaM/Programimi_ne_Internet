@@ -28,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 } else { ?>
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
         <header>
                 <head>
                     <title>LUXURY JEWELLERY</title>
@@ -70,20 +71,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                 </body>
             </header>
+=======
+        <?php include ('header.php'); ?>
+>>>>>>> a5deb9a22e2b656b755abfef77b2a696558769b5
 <body>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="loginstyle.css">
     </head>
     <style>
+<<<<<<< HEAD
             body
+=======
+			body
+>>>>>>> a5deb9a22e2b656b755abfef77b2a696558769b5
 				{
                     background-image= "pictures/foto.jpg";
 					background-attachment:fixed;
 					background-size: 100% 100%;
 				}
 		</style>
+<<<<<<< HEAD
         <div id="container"><br>
+=======
+               <div id="container"><br>
+>>>>>>> a5deb9a22e2b656b755abfef77b2a696558769b5
 			    <div id="login-right">
 				<div class="login-margin"></div>
                 <?php
@@ -97,8 +109,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <input class="short-pass" name="password" type="password" placeholder="Password" required >       
                                 
                                 <button class="btn-login"  type="submit" name="login">Login</button>
+<<<<<<< HEAD
                             </form>
                 </div>		
+=======
+                
+                            </form>
+                
+                </div>
+               			
+>>>>>>> a5deb9a22e2b656b755abfef77b2a696558769b5
         		<div id="login-left">
 				<h1>Welcome to Our Website</h1>
 					<br>
@@ -111,6 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			<div class="clear"></div>
     </div>
     </body>
+<<<<<<< HEAD
     <footer>
             <head>
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -227,3 +248,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </footer>
          </html>
          <?php } ?>
+=======
+
+    <?php include ('footer.php'); ?>
+    
+         </html>
+>>>>>>> a5deb9a22e2b656b755abfef77b2a696558769b5
