@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 function writeLog($txt = "") {
   file_put_contents(__DIR__ . '/../log.txt', $txt . PHP_EOL , FILE_APPEND | LOCK_EX);
@@ -92,6 +93,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         
             </header>
+=======
+<!DOCTYPE html>
+<html>
+        
+    <?php include ('header.php'); ?>
+>>>>>>> a5deb9a22e2b656b755abfef77b2a696558769b5
 
 <body>
     <head>
@@ -109,12 +116,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                  <div id="container"><br>
                      <div id="signup-right">
 				     <div class="sign-margin"></div>
+<<<<<<< HEAD
                      <form name=Form1 method="post" action="signup.php" onsignup="return myfunction1()" autocomplete="on"> 
+=======
+                     <form name=Form1 method="post" onsignup="return myfunction1()" autocomplete="on"> 
+>>>>>>> a5deb9a22e2b656b755abfef77b2a696558769b5
                                 <h2> Sign Up </h2> 
 							
                                     <input class="long"  name="username" required="required" type="text" placeholder="Username" />                               
                                     <input class="long"  name="password" required="required" type="password" placeholder="Password"/>                             
+<<<<<<< HEAD
                                     <input  class="name"  name="name" required="required" type="text" placeholder="First Name"/>
+=======
+                                    <input  class="name"  name="firstname" required="required" type="text" placeholder="First Name"/>
+>>>>>>> a5deb9a22e2b656b755abfef77b2a696558769b5
                                     <input  class="name"  name="lastname" required="required" type="text" placeholder="Last Name"/>
                                 
 							
@@ -161,6 +176,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                      <div class="clear"></div>
     </div>
     </body>
+<<<<<<< HEAD
 
 
 
@@ -316,3 +332,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </footer>
          </html>
          <?php } ?>
+=======
+    
+<?php include ('footer.php'); ?>
+    
+         </html>
+>>>>>>> a5deb9a22e2b656b755abfef77b2a696558769b5
