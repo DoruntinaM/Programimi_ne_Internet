@@ -140,7 +140,7 @@ a:active {
                                   
                                   </p>
                                   <br>
-                    <a href="Fakte me video.html" target="_parent"> <button>READ MORE &gt;</button></a>
+                    <a href="Fakte me video.php" target="_parent"> <button>READ MORE &gt;</button></a>
                     </div>
                       
                       <div class="column1" >
@@ -151,7 +151,7 @@ a:active {
                              We are sure they will help you.
                           </p>
                           <br>
-                          <a href="questions.html" target="_blank"><button>READ MORE &gt;</button></a>
+                          <a href="questions.php" target="_blank"><button>READ MORE &gt;</button></a>
                       
                         
                       </div>
@@ -238,7 +238,7 @@ a:active {
 <strong>To view Rubin Stone</strong>
 <img src="pictures/rubin.jpg" alt="Rubini" width="55" height="55" align="left"> Rubin stone and its
  specifics
-<a style="color:red;" href= "Rubin.html"> View profile </a>>
+<a style="color:red;" href= "Rubin.php"> View profile </a>>
 </pre>
                 </td>
                 <br>
@@ -251,7 +251,7 @@ a:active {
 <strong>To view Emerald Stone</strong>
 <img src="pictures/emerald-gemstone-500x500.jpg" alt="Emerald" width="80" height="80" align="left">Emerald stone and its
 specifics
-<a style="color:red;" href="Emerald.html">View profile </a>>
+<a style="color:red;" href="Emerald.php">View profile </a>>
 </pre>
                 </td>
                 <tr>
@@ -260,13 +260,13 @@ specifics
 <strong>To view Sapphire Stone</strong>
 <img src="pictures/safiri.jpg" alt="Sapphire" width="70" height="70" align="left">Sapphire gem and its
 specifics
-<a style="color:red;" href="SAFIR.html">View profile </a>> </pre> </td> 
+<a style="color:red;" href="SAFIR.php">View profile </a>> </pre> </td> 
                         <td>
 
 <pre><strong>To view Diamond Stone</strong>
 <img src="pictures/diamanti.jpg" alt=Diamond width="80" height="60" align="left">Diamond gem and its
 specifics
-<a style="color:red;" href="diamond.html">View profile </a>></pre>
+<a style="color:red;" href="diamond.php">View profile </a>></pre>
                 </td> 
                 </tr>
                        </table> 
