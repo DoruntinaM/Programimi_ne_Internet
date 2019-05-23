@@ -2,7 +2,7 @@
 function writeLog($txt = "") {
     file_put_contents(__DIR__ . '/../log.txt', $txt . PHP_EOL , FILE_APPEND | LOCK_EX);
   }
-session_start();
+include ('header.php');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   include __DIR__ . '\LidhjaDB.php';
   include __DIR__ . '\SaltedHash.php';
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 } else { ?>
 <!DOCTYPE html>
 <html>
-        <?php include ('header.php'); ?>
+       
 <body>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
