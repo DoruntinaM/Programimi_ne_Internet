@@ -99,7 +99,7 @@
           </div>
           <div class="column" style="background-color:#282828;">
             <h2>Newsletter</h2>
-            <br>
+            
             <div>
                 
                        
@@ -112,18 +112,13 @@
                    <input type ="text" name="phone" placeholder="Enter your phone" required><br>
                    <label for="message" >Message </label><br>
                    <textarea name="msg" placeholder="Enter your message here..." required></textarea><br>
+
+                 
                    <input type ="submit" name="submit" value="Send" class="button">
                    </form>
-            
 
-
-
-
-
-       
-            
-           
-        
+                   
+ 
           </div>
         </div>
             </div>

@@ -199,11 +199,7 @@ div.t {
          </div>
 
 
-        <svg width="400" height="180">
-            <rect x="50" y="20" rx="20" ry="20" width="25" height="25"
-            style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
-          Sorry, your browser does not support inline SVG.
-          </svg>
+   <br>
 
 
           <canvas id="myCanvas" width="1320" height="100" style="border:1px solid #d3d3d3;">
@@ -225,8 +221,7 @@ div.t {
           
         
          
-           
-
+          
 </body>
 
     <?php include ('footer.php'); ?>

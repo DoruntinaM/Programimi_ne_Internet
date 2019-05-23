@@ -223,7 +223,21 @@ a:active {
                  the precious <br>stones/gems that this jewelry that we sell is made from click on 
                  the right side,<br> where you can find the four main products we use for making 
                  the products that you love.
-               <br>
+                 <?php
+                 $number = 1;
+                 $str = "products";
+                 printf("There are %u million people only in Kosovo using our %s.<br>",$number,$str);
+
+                 $likes='Home, About us, Rings, Earrings, Barcelets, Contact Us';
+                 $likes=explode(',', $likes);
+
+                 foreach($likes as $key=>$like) {
+                     echo $like, ' at site ', $key, '<br>';
+                 }
+                 ?>
+<br>
+
+               
                
             </p>
                                 

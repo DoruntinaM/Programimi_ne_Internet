@@ -6,6 +6,11 @@ if (isset($_POST['submit'])){
     $phone=$_POST['phone'];
     $msg=$_POST['msg'];
 
+
+
+
+
+
     $to='doruntina.murtezaj@gmail.com';
     $subject='Form Submission';
     $message="Name: ".$name."\n"."Phone: ".$phone."\n"."Wrote the following: "."\n\n".$msg;
@@ -21,6 +26,7 @@ if (isset($_POST['submit'])){
         echo "Something went wrong!";
     }
 }
+
 
 
 

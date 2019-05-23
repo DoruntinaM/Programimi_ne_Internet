@@ -200,19 +200,7 @@ div.t {
                 Join this fabulous community as a new member, renew your current membership, or offer <abbr title="LUXURY JEWELLERY">LJ</abbr> membership as a gift.
                 
                 </p>
-         </div>
-
-
-        <svg width="400" height="180">
-            <rect x="50" y="20" rx="20" ry="20" width="25" height="25"
-            style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
-          Sorry, your browser does not support inline SVG.
-          </svg>
-
-          
-        
-         
-           
+         </div>      
 
 </body>
 
