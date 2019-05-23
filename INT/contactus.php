@@ -24,7 +24,7 @@
 
                 <font color="black" size="6px"> CONTACT US </font> <br> <br>
 
-                <h2><mark>Luxury Jewelry</mark></h2>
+                <h2>Luxury Jewelry</h2>
                 
                 <br>
                 <br>
@@ -35,7 +35,15 @@
                 <br>
                 <br>
                 
-                Mob : +383 227788
+                    
+                    <?php
+                 $number = array("Mobile"=>"045 888 999", "Fix"=>"038 145 698", "International"=>"+164 987 0258");
+                 echo "Our mobile number : " . $number['Mobile'] . " "; 
+                 echo "<br>";
+                 echo "Our fix number : " . $number['Fix'] . " "; 
+                 echo "<br>";
+                 echo "Our international number : " . $number['International'] . " ";
+                    ?>
                 
                 <br>
                 <br>
@@ -64,12 +72,7 @@
         
         <p><button onclick="clickCounter()" type="button">Like our Website!</button></p>
         <div id="result"></div>
-        
-
-
-
-            
-
+    
 <br>
 <br>
 <br>

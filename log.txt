@@ -40,3 +40,13 @@ Dikush e ka vizituar register.php
 Dikush e ka vizituar register.php
 Dikush e ka vizituar register.php
 Dikush e ka vizituar register.php
+Dikush e ka vizituar register.php
+Dikush e ka vizituar register.php
+Dikush e ka vizituar register.php
+INSERT INTO USERS VALUES('enishallci', 'abf131ebed17cec7271d3a3d2a5059a098581383/104fb7431ca6c0af0d93213a03c8361a66562c4c', 'enis','shallci')
+Error: 
+Dikush e ka vizituar register.php
+Dikush e ka vizituar register.php
+INSERT INTO USERS VALUES('dardanshabani', 'c351772a572a3c21a814b1d74ce9c7af77d370ef/091f8461b8cea3a27594b192765d16ba0491aab7', 'dardan','shabani')
+Error: 
+Dikush e ka vizituar register.php

@@ -54,11 +54,6 @@ div.t {
 </head>
 
 
-
-
-
-
-
 <div class="content display-container">
   <img class="mySlides" src="pictures/1.jpg" style="width:100%">
   <img class="mySlides" src="pictures/2.jpg" style="width:100%">
@@ -186,11 +181,36 @@ div.t {
          </div>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<pre ><h3>    Our top earing brands sotrted by alphabetic oreder: </h3></pre >
+<div style="width:600px; margin:0 auto;">
+    <?php
+    $earings = array("Swarovski", "Diamond", "Ruby", "Oliver Weber");
+    sort($earings);
+
+    $elength = count($earings);
+    for($x = 0; $x < $elength; $x++) {
+    echo $earings[$x];
+    echo "<br>";
+    }
+    ?>
+    <br>
+    </div>
+    
+<pre ><h3>    Our top earing brands sold this year: </h3></pre >
+<div style="width:800px; margin:0 auto;">
+    <?php
+$age = array("Swarovski"=>"50", "Diamond"=>"37", "Ruby"=>"22", "Oliver Weber"=>"43");
+arsort($age);
+
+foreach($age as $x => $x_value) {
+    echo "Brand :" . $x . " and the number of earings sold :" . $x_value;
+    echo "<br>";
+}
+?>
+    
+    </div>
+    <br>
+    
 <div class="t">
          <p style="font-size:35px;"><font color="pink" ><big><big>GIVE THE GIFT OF STYLE...</big></big>
          </font></p>
