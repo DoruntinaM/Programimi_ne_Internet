@@ -179,7 +179,7 @@ div.t {
         <img src="pictures/r10.jpg" alt="P nr.4" style="width:100%">
             <h1>Pandora</h1>
             <p class="price">$150</p>
-            <p>July Droplet Ring, Synthetic Ruby</p>
+            <p >July Droplet Ring, Synthetic Ruby</p>
                 
          </div>
          </div>
@@ -187,6 +187,27 @@ div.t {
 <br>
 <br>
 <br>
+    
+    <pre ><h2>    2018 has been a great year for our company and for the moment these are the statistics: </h2></pre >
+    <br>
+    <div style="width:600px; margin:0 auto;">
+    <?php
+$rings = array
+  (
+  array("Oliver Weber",52,38),
+  array("Swarovski",45,33),
+  array("Pandora",35,20),
+  array("Tiffany",17,5)
+  );
+
+ 
+echo $rings[0][0].":In stock: ".$rings[0][1].", sold: ".$rings[0][2].".<br>";
+echo $rings[1][0].":In stock: ".$rings[1][1].", sold: ".$rings[1][2].".<br>";
+echo $rings[2][0].":In stock: ".$rings[2][1].", sold: ".$rings[2][2].".<br>";
+echo $rings[3][0].":In stock: ".$rings[3][1].", sold: ".$rings[3][2].".<br>";
+?>
+  <br>  
+    </div>
 <div class="t">
          <p style="font-size:35px;"><font color="pink" ><big><big>GIVE THE GIFT OF STYLE...</big></big>
          </font></p>
@@ -220,7 +241,8 @@ div.t {
             ctx.fillStyle = grd;
             ctx.fillRect(10,10,2300,80);
             </script>
-                            
+                       
+
 
           
         
