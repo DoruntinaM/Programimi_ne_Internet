@@ -21,7 +21,39 @@
             <tr>
                 <td width="700px">
                     <br><br>
+                <font color="black" size="5px"> FUNNY SENTENCES </font> <br> <br>
+                <?php
 
+ $text = " <h2><pre>    I was _VERB_ing in the _PLACE_ when I found a _NOUN_.
+            I _VERB_ed in, and _VERB_ed too much _NOUN_.
+            I had to go to the _PLACE_.<pre></h2>";
+
+$verbs = explode("\n", file_get_contents("words.verbs.txt"));
+$places = explode("\n", file_get_contents("words.places.txt"));
+$nouns = explode("\n", file_get_contents("words.nouns.txt"));
+
+while (preg_match("/(_VERB_)|(_PLACE_)|(_NOUN_)/", $text, $matches)) {
+    switch ($matches[0]) {
+        case '_VERB_' :
+            shuffle($verbs);
+            $text = preg_replace('/' . $matches[0] . '/', current($verbs), $text, 1);
+            break;
+        case '_PLACE_' :
+            shuffle($places);
+            $text = preg_replace('/' . $matches[0] . '/', current($places), $text, 1);
+            break;
+        case '_NOUN_' :
+            shuffle($nouns);
+            $text = preg_replace('/' . $matches[0] . '/', current($nouns), $text, 1);
+            break;
+    }
+}
+
+echo $text . "\n";
+
+?>
+            <br>
+            <br>
                 <font color="black" size="6px"> CONTACT US </font> <br> <br>
 
                 <h2>Luxury Jewelry</h2>
