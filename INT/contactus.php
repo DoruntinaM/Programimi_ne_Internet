@@ -22,11 +22,13 @@
                 <td width="700px">
                     <br><br>
                 <font color="black" size="5px"> FUNNY SENTENCES </font> <br> <br>
+                <hr>
+                <br>
+                    
                 <?php
 
  $text = " <h2><pre>    I was _VERB_ing in the _PLACE_ when I found a _NOUN_.
-            I _VERB_ed in, and _VERB_ed too much _NOUN_.
-            I had to go to the _PLACE_.<pre></h2>";
+    I had to go to the _PLACE_.<pre></h2>";
 
 $verbs = explode("\n", file_get_contents("words.verbs.txt"));
 $places = explode("\n", file_get_contents("words.places.txt"));
@@ -53,8 +55,11 @@ echo $text . "\n";
 
 ?>
             <br>
+            <hr>
+            <br>
             <br>
                 <font color="black" size="6px"> CONTACT US </font> <br> <br>
+                <
 
                 <h2>Luxury Jewelry</h2>
                 
