@@ -24,7 +24,7 @@
 
                 <font color="black" size="6px"> CONTACT US </font> <br> <br>
 
-                <h2><mark>Luxury Jewelry</mark></h2>
+                <h2>Luxury Jewelry</h2>
                 
                 <br>
                 <br>
