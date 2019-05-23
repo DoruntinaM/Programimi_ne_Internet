@@ -57,13 +57,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     <input class="long"  name="password" required="required" type="password" placeholder="Password"/>                        
                                     <input  class="name"  name="name" required="required" type="text" placeholder="First Name"/>
                                     <input  class="name"  name="lastname" required="required" type="text" placeholder="Last Name"/>
-                                
-							
+                                          
+                                    <input type='file' name='file1' id='file1' />(Optional)
 							
 								<select id="passwordsignup"  name="gender" required >
 										<option>Male</option>
 										<option>Female</option>
-								</select>
+								</select>(Optional)
                              
            					<button class="btn-signup" onclick="myfunction1()" type="submit" name="signup" >Sign Up</button>
                                <script>
@@ -89,6 +89,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 }
                                 </script>
                             </form>
+                            <?php
+                            foreach ($_FILES as $key=>$value)
+                            {
+                                    
+                            }
+                            ?>
                          </div>
 							
         		<div id="signup-left">
