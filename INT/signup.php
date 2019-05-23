@@ -8,7 +8,7 @@ function escape($db, array $strings) {
       return $db->real_escape_string($str);
     }, $strings);
 }
-writeLog('Dikush e ka vizituar register.php');
+writeLog('Dikush e ka vizituar signup.php');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   include __DIR__ . '\LidhjaDB.php';
   include __DIR__ . '\SaltedHash.php';
@@ -28,6 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $db->query($query);
   writeLog($query);
   writeLog('Error: ' . $db->error);
+  header("Location: login.php"); 
+ 
 } else { ?>
 <!DOCTYPE html>
 <html>
@@ -102,7 +104,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </body>
     <?php include ('footer.php'); ?>
          </html>
-         <?php } ?>
+         <?php 
+        header("Location: login.php"); 
+        } ?>
     
 
     
