@@ -16,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $result = $db->query($query);
   writeLog("Login attempt nga: $username");
   if ($result->num_rows == 0) {
+    header("Location: login.php"); 
     writeLog("Username nuk ekziston");
   } else {
     $row = $result->fetch_assoc();
@@ -53,8 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				<form action ="login.php" method="POST"  autocomplete="on"> 
                                 <h2>Login</h2> 
                                 <input class="long" name="username" type="text" placeholder="Username" required  autofocus >
-                                <input class="short-pass" name="password" type="password" placeholder="Password" required >       
-                                
+                                <input class="short-pass" name="password" type="password" placeholder="Password" required > 
+    
                                 <button class="btn-login"  type="submit" name="login">Login</button>	
                 
                             </form>
