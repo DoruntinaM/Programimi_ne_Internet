@@ -91,20 +91,7 @@
 
  
 </body>
-<script type="text/javascript">
-    var currentTime = new Date().getHours();
-    if (7 <= currentTime && currentTime < 20) {
-        if (document.body) {
-            document.body.background = "pictures/day.jpg";
-        }
-    }
-    else {
-        if (document.body) {
-            document.body.background = "pictures/night.jpg";
-        }
-    }
-    
-    </script>
+
 
 <?php include ('footer.php'); ?>
     
