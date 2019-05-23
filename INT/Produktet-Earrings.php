@@ -199,17 +199,30 @@ div.t {
 <pre ><h3>    Our top earing brands sold this year: </h3></pre >
 <div style="width:800px; margin:0 auto;">
     <?php
-$age = array("Swarovski"=>"50", "Diamond"=>"37", "Ruby"=>"22", "Oliver Weber"=>"43");
-arsort($age);
+$brands = array("Swarovski"=>"50", "Diamond"=>"37", "Ruby"=>"22", "Oliver Weber"=>"43");
+arsort($brands);
 
-foreach($age as $x => $x_value) {
-    echo "Brand :" . $x . " and the number of earings sold :" . $x_value;
+foreach($brands as $x => $x_value) {
+    echo "Brand " . $x . " and the number of earings sold :" . $x_value;
     echo "<br>";
 }
 ?>
     
     </div>
     <br>
+<pre ><h3>    The new brands we wil get this year: </h3></pre >
+<div style="width:800px; margin:0 auto;">
+    <?php
+$brand = array("Feramox"=>"Paris", "Pearl"=>"London", "Gold "=>"Milano", "Rose "=>"Manchester" , "Safir"=>"Prague","Rubin"=>"Berlin");
+krsort($brand);
+
+foreach($brand as $x => $x_value) {
+    echo "Brand " . $x . " and they come from " . $x_value;
+    echo "<br>";
+}
+?>
+    
+    </div>
     
 <div class="t">
          <p style="font-size:35px;"><font color="pink" ><big><big>GIVE THE GIFT OF STYLE...</big></big>
