@@ -59,7 +59,7 @@ echo $text . "\n";
             <br>
             <br>
                 <font color="black" size="6px"> CONTACT US </font> <br> <br>
-                <
+                
 
                 <h2>Luxury Jewelry</h2>
                 
