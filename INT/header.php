@@ -15,7 +15,6 @@
                 <li>Call Us Now:+383 227788</li>
                 <li>Email:<a href="mailto:luxury.jewelry@luxjewelry.com">luxury.jewelry@luxjewelry.com </a></li>
                 </ul>
-                
                 <ul id="right-navheader">
                 <li><a href="signup.php">Sign Up</a></li>
                 <li>| <a href="login.php">Login</a></li>

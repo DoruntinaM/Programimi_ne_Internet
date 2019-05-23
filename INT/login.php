@@ -1,4 +1,7 @@
 <?php
+function writeLog($txt = "") {
+    file_put_contents(__DIR__ . '/../log.txt', $txt . PHP_EOL , FILE_APPEND | LOCK_EX);
+  }
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   include __DIR__ . '\LidhjaDB.php';
@@ -20,9 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (checkPassword($password, $dbPassword)) {
       writeLog("Login valid");
       $_SESSION['username'] = $row['username'];
+      header("Location: LJ.php"); 
       echo "Success";
     } else {
-      writeLog("Login jo-valid");
+    header("Location: login.php"); 
+    writeLog("Login jo-valid");
     }
   }
 } else { ?>
@@ -45,11 +50,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                <div id="container"><br>
 			    <div id="login-right">
 				<div class="login-margin"></div>
-                <?php
-                if (isset($_SESSION['email'])) {
-                echo "Jeni te loguar si " . $_SESSION['email'];
-                }
-                ?>
 				<form action ="login.php" method="POST"  autocomplete="on"> 
                                 <h2>Login</h2> 
                                 <input class="long" name="username" type="text" placeholder="Username" required  autofocus >
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <button class="btn-login"  type="submit" name="login">Login</button>	
                 
                             </form>
-                
+              
                 </div>
                			
         		<div id="login-left">
