@@ -206,7 +206,18 @@ echo $rings[1][0].":In stock: ".$rings[1][1].", sold: ".$rings[1][2].".<br>";
 echo $rings[2][0].":In stock: ".$rings[2][1].", sold: ".$rings[2][2].".<br>";
 echo $rings[3][0].":In stock: ".$rings[3][1].", sold: ".$rings[3][2].".<br>";
 ?>
-  <br>  
+  <br>
+        
+<?php
+$data = array("Oliver Weber", "Swarovski", "Tiffany", "Pandora");
+echo "Rndomly the ring that fits you the best is: " . $data[array_rand($data)];
+?>
+ <br>
+<?php
+$ring = array("Oliver Weber", "Swarovski", "Tiffany", "Pandora");
+echo "The number of top brands that we have is :";
+echo count($ring);
+?>
     </div>
 <div class="t">
          <p style="font-size:35px;"><font color="pink" ><big><big>GIVE THE GIFT OF STYLE...</big></big>
