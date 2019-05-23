@@ -71,7 +71,16 @@
           <td>Native Minerals</td>
         </tr>
       </table>
+            <br>
+            <br>
             
+            <?php
+            $arr=array("<h4>How is the quality of diamonds measured?","Which is the finest diamond?","Why would you use diamond?<h4>");
+            $str = implode(" & ",$arr);
+            echo "The three most common questions about Diamonds are:  " . $str;
+
+            ?>
+
             <br>
             <br>
             <div class="row">

@@ -69,7 +69,11 @@
      </div>
 
   <div class="a">
-    <h2>THE STORY OF RINGS: 8 INTERESTING FACTS</h2>
+  <?php
+$str = "ABCTHE STORY OF RINGS: 8 INTERESTING FACTSABC!";
+echo trim($str,"ABCABC!");
+?>
+  
 
     <ul>
       <li>A ring is an unbroken circle, which many cultures understand as representative of eternit</li>
