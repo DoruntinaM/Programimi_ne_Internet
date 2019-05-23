@@ -42,11 +42,15 @@
     <ol>
         <li>Beryl</li>
             <ul>
-                <li>Aquamarine</li>
-                <li>Emerald</li>
-                <li>Morganite</li>
-                <li>Red Beryl</li>
-            </ul>
+                <li>
+                
+                <?php
+                      $beryl = array("Aquamarine", "Emerald", "Morganite","Red Beryl"); 
+                       echo  "". $beryl[0] . " , " . $beryl[1] . " , " . $beryl[2] . " and " .$beryl[3] . "";
+                ?>
+                </li>
+   
+        </ul>
         <li>Corundum</li>
             <ul>
                 <li>Ruby</li>
