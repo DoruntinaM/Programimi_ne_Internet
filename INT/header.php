@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <header>
     
         <head>
@@ -16,9 +19,18 @@
                 <li>Email:<a href="mailto:luxury.jewelry@luxjewelry.com">luxury.jewelry@luxjewelry.com </a></li>
                 </ul>
                 <ul id="right-navheader">
-                <li><a href="signup.php">Sign Up</a></li>
-                <li>| <a href="login.php">Login</a></li>
-                <li>| <a href="https://blog.feedspot.com/jewelry_rss_feeds/">RSS Feeds</a></li>
+                <?php
+                if (isset($_SESSION['username'])) {
+                echo "<li> Jeni te loguar si " . $_SESSION['username']."</li>";
+                echo "<li><a href="."".">Ndrysho ose Fshij</a></li>";
+                echo "<li><a href="."logout.php".">Logout</a></li>";
+                echo "<li>| <a href="."https://blog.feedspot.com/jewelry_rss_feeds/".">RSS Feeds</a></li>";
+                }else{
+                    echo "<li><a href="."signup.php".">Sign Up</a></li>";
+                    echo "<li>| <a href="."login.php".">Login</a></li>";
+                    echo "<li>| <a href="."https://blog.feedspot.com/jewelry_rss_feeds/".">RSS Feeds</a></li>";
+                }
+                ?>
                 </ul>
             
             </div>
