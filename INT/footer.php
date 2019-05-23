@@ -66,29 +66,7 @@
         
         
         </style>
-        <script>
-            function validateForm() {
-              var x = document.forms["myForm"]["name"].value;
-              var y = document.forms["myForm"]["email"].value;
-              if (x == "") {
-                alert("Name must be filled out");
-                
-              }
-              else
-                 if(y==""){
-                  alert("Email must be filled out");
-              }
-                  else
-                    {
 
-                
-                
-                    alert("Thank you, your submission has been received");
-                
-
-              }
-            }
-            </script>
         </head>
         <body>
         
@@ -122,25 +100,24 @@
           <div class="column" style="background-color:#282828;">
             <h2>Newsletter</h2>
             <br>
-            <p>Subscribe to the newsletter and receive a 10% voucher. 
-                Receive email updates.
-             </p>
             <div>
-                    <form name="myForm" action="/action_page.php"  onsubmit="return validateForm()" method="post" autocomplete="on">
-                        <input type="text" id="fname" name="name"  placeholder="Name">
-                        <input type="text" id="lname" name="email" placeholder="Email">
-                        </form>
-
-            <br>
-
-
-
+                
+                       
+                   <form action="mail_handler.php" method="post" name="form" >
+                   <label for="name">Name</label><br>
+                   <input type ="text" name="name" placeholder="Enter your name" required><br>
+                   <label for="email">Email</label><br>
+                   <input type ="text" name="email" placeholder="Enter your email" required><br>
+                   <label for="phone">Phone</label><br>
+                   <input type ="text" name="phone" placeholder="Enter your phone" required><br>
+                   <label for="message" >Message </label><br>
+                   <textarea name="msg" placeholder="Enter your message here..." required></textarea><br>
+                   <input type ="submit" name="submit" value="Send" class="button">
+                   </form>
             
 
 
 
-    
-          <button class="button" onclick="validateForm()"  >SUBMIT</button>
 
 
        
