@@ -1,15 +1,12 @@
 <?php 
 
+
+
 if (isset($_POST['submit'])){
     $name =$_POST['name'];
     $email =$_POST['email'];
     $phone=$_POST['phone'];
     $msg=$_POST['msg'];
-
-
-
-
-
 
     $to='doruntina.murtezaj@gmail.com';
     $subject='Form Submission';
@@ -30,7 +27,7 @@ if (isset($_POST['submit'])){
 
 
 
+ ?>
 
 
 
-?>

@@ -101,8 +101,7 @@
             <h2>Newsletter</h2>
             
             <div>
-                
-                       
+      
                    <form action="mail_handler.php" method="post" name="form" >
                    <label for="name">Name</label><br>
                    <input type ="text" name="name" placeholder="Enter your name" required><br>

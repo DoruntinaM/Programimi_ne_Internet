@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
   
+
+    
 <?php include ('header.php'); ?>
+
+
+
 
 <body>
   <head>
@@ -9,6 +14,10 @@
 <title>Aksesoret</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="body.html">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 
 <style>
 .mySlides {display:none;}
@@ -200,7 +209,45 @@ div.t {
                 Join this fabulous community as a new member, renew your current membership, or offer <abbr title="LUXURY JEWELLERY">LJ</abbr> membership as a gift.
                 
                 </p>
-         </div>      
+         </div>  
+         <h1>Enter Product</h1> 
+         <form method='post' action='insert.php'>
+         <input type='text' id='name' name='productname' placeholder='Enter product name'/>
+         <input type='text' id='brand' name='brandname' placeholder='Enter brand name'/>
+         <input type='number' id='quantity' name='quantity' placeholder='Quantity'/>
+         <button>Save Product</button>
+          </form>
+
+          <p id="result"></p> 
+
+
+           <script>
+          $("form").submit(function(e){
+              e.preventDefault();
+              $.post(
+                'insert.php',
+                {
+                  productname: $("#name").val(),
+                  brandname:$("#brand").val(),
+                  quantity:$("#quantity").val()
+                },
+                function(result){
+                  if(result == "success"){
+                     $("#result").html("Values inserted successfully");
+                  }else{
+                      $("#result").html("Error occured");
+                    
+
+
+                  }
+                }
+
+
+              );
+          });
+          </script> 
+        
+
 
 </body>
 
