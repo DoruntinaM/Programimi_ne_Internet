@@ -18,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if ($result->num_rows == 0) {
     header("Location: login.php"); 
     writeLog("Username nuk ekziston");
+    $_SESSION['mesazhi'] = "Username ose Password gabim!";
   } else {
     $row = $result->fetch_assoc();
     $dbPassword = $row['password'];
@@ -29,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
     header("Location: login.php"); 
     writeLog("Login jo-valid");
+    $_SESSION['mesazhi'] = "Username ose Password gabim!";
     }
   }
 } else { ?>
@@ -51,6 +53,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                <div id="container"><br>
 			    <div id="login-right">
 				<div class="login-margin"></div>
+        <?php
+        if(isset($_SESSION['mesazhi'])){
+          echo $_SESSION['mesazhi'];
+        }
+        ?>
 				<form action ="login.php" method="POST"  autocomplete="on"> 
                                 <h2>Login</h2> 
                                 <input class="long" name="username" type="text" placeholder="Username" required  autofocus >
