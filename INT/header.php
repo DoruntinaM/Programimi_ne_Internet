@@ -22,8 +22,8 @@ session_start();
                 <?php
                 if (isset($_SESSION['username'])) {
                 echo "<li> Jeni te loguar si " . $_SESSION['username']."</li>";
-                echo "<li><a href="."".">Ndrysho ose Fshij</a></li>";
-                echo "<li><a href="."logout.php".">Logout</a></li>";
+                echo "<li>| <a href="."ndryshoFshij.php".">Ndrysho ose Fshij</a></li>";
+                echo "<li>| <a href="."logout.php".">Logout</a></li>";
                 echo "<li>| <a href="."https://blog.feedspot.com/jewelry_rss_feeds/".">RSS Feeds</a></li>";
                 }else{
                     echo "<li><a href="."signup.php".">Sign Up</a></li>";
