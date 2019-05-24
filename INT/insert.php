@@ -1,11 +1,11 @@
 <?php
-
+include('LidhjaDB.php');
 
 $name=$_POST['productname'];
 $brand=$_POST['brandname'];
 $quantity=$_POST['quantity'];
 
-$con = new mysqli('localhost', 'root', '', 'jewelery');
+$con = connectDB();
 
 if($con->connect_error){
     echo 'database connection error';
