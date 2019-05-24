@@ -50,3 +50,9 @@ Dikush e ka vizituar register.php
 INSERT INTO USERS VALUES('dardanshabani', 'c351772a572a3c21a814b1d74ce9c7af77d370ef/091f8461b8cea3a27594b192765d16ba0491aab7', 'dardan','shabani')
 Error: 
 Dikush e ka vizituar register.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+INSERT INTO USERS VALUES('doruntina', 'fbc663fafe4f6f96a42b407eca2f76443d506c75/dc45a4330556b25c8670ba2d0630e3db79d54e95', 'endrit','bajrami')
+Error: 
+Login attempt nga: doruntina
+Login valid

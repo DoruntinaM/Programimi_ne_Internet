@@ -2,7 +2,7 @@
 function writeLog($txt = "") {
     file_put_contents(__DIR__ . '/../log.txt', $txt . PHP_EOL , FILE_APPEND | LOCK_EX);
   }
-session_start();
+include ('header.php');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   include __DIR__ . '\LidhjaDB.php';
   include __DIR__ . '\SaltedHash.php';
@@ -18,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if ($result->num_rows == 0) {
     header("Location: login.php"); 
     writeLog("Username nuk ekziston");
+    $_SESSION['mesazhi'] = "Username ose Password gabim!";
   } else {
     $row = $result->fetch_assoc();
     $dbPassword = $row['password'];
@@ -29,12 +30,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
     header("Location: login.php"); 
     writeLog("Login jo-valid");
+    $_SESSION['mesazhi'] = "Username ose Password gabim!";
     }
   }
 } else { ?>
 <!DOCTYPE html>
 <html>
-        <?php include ('header.php'); ?>
+       
 <body>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,6 +53,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                <div id="container"><br>
 			    <div id="login-right">
 				<div class="login-margin"></div>
+        <?php
+        if(isset($_SESSION['mesazhi'])){
+          echo $_SESSION['mesazhi'];
+        }
+        ?>
 				<form action ="login.php" method="POST"  autocomplete="on"> 
                                 <h2>Login</h2> 
                                 <input class="long" name="username" type="text" placeholder="Username" required  autofocus >
