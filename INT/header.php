@@ -15,8 +15,8 @@ session_start();
         
         <div class="top" style="font-size:12px;">
             <ul id="left-navheader">
-                <li>Call Us Now:+383 227788</li>
-                <li>Email:<a href="mailto:luxury.jewelry@luxjewelry.com">luxury.jewelry@luxjewelry.com </a></li>
+                <li>Call Us Now : +383-227-788</li>
+                <li>Email : <a href="mailto:luxury.jewelry@luxjewelry.com">luxury.jewelry@luxjewelry.com </a></li>
                 </ul>
                 <ul id="right-navheader">
                 <?php
