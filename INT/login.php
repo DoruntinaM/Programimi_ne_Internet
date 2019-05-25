@@ -1,7 +1,9 @@
 <?php
-function writeLog($txt = "") {
-    file_put_contents(__DIR__ . '/../log.txt', $txt . PHP_EOL , FILE_APPEND | LOCK_EX);
-  }
+require("Database.php");
+require("Functions.php");
+
+$functionsObj = new Functions();
+
 include ('header.php');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   include __DIR__ . '\LidhjaDB.php';
@@ -11,25 +13,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $username = $_POST['username'];
   $password = $_POST['password'];
   $db = connectDb();
-  $escapedUsername = $db->real_escape_string($username);
+  $databaseObj = new Database($db);
+
+  $escapedUsername = $databaseObj->escapeString($username);
   $query = "SELECT * FROM USERS WHERE username='$escapedUsername';";
-  $result = $db->query($query);
-  writeLog("Login attempt nga: $username");
+  $result = $databaseObj->queryResult($query);
+  $functionsObj->writeLog("Login attempt nga: $username");
   if ($result->num_rows == 0) {
     header("Location: login.php"); 
-    writeLog("Username nuk ekziston");
+    $functionsObj->writeLog("Username nuk ekziston");
     $_SESSION['mesazhi'] = "Username ose Password gabim!";
   } else {
     $row = $result->fetch_assoc();
     $dbPassword = $row['password'];
     if (checkPassword($password, $dbPassword)) {
-      writeLog("Login valid");
+      $functionsObj->writeLog("Login valid");
       $_SESSION['username'] = $row['username'];
       header("Location: LJ.php"); 
       echo "Success";
     } else {
     header("Location: login.php"); 
-    writeLog("Login jo-valid");
+    $functionsObj->writeLog("Login jo-valid");
     $_SESSION['mesazhi'] = "Username ose Password gabim!";
     }
   }
