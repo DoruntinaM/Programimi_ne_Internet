@@ -1,9 +1,38 @@
 <!DOCTYPE html>
 <html>
+<head>
 
     <?php include ('header.php'); ?>
+    <br>
+    <br>
+    <h3>If you want to know which brands you can find at Luxury Jewelry, please start typing a name in the input field below:</h3>
+
+
+
+<p>Name of Brand: <input type="text" id="txt1" onkeyup="showHint(this.value)"></p>
+
+<p>Suggestions: <span id="txtHint"></span></p> 
+
+<script>
+function showHint(str) {
+  var xhttp;
+  if (str.length == 0) { 
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "gethint.php?q="+str, true);
+  xhttp.send();   
+}
+</script>
+
     
-    
+</head>
 <body>
     <head>
 
@@ -56,6 +85,11 @@ echo $text . "\n";
 ?>
             <br>
             <hr>
+
+
+
+
+
             <br>
             <br>
                 <font color="black" size="6px"> CONTACT US </font> <br> <br>

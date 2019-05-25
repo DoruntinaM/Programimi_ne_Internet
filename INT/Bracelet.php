@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html>
   
-
-    
+<head>
 <?php include ('header.php'); ?>
+<script>
+function showBrands(str) {
+  if (str=="") {
+    document.getElementById("txtHint").innerHTML="";
+    return;
+  } 
+  if (window.XMLHttpRequest) {
+    // Kodi per IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else { // kodi per  IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("txtHint").innerHTML=this.responseText;
+    }
+  }
+  xmlhttp.open("GET","getbrand.php?q="+str,true);
+  xmlhttp.send();
+}
+</script>
 
-
+</head>
 
 
 <body>
@@ -246,6 +266,20 @@ div.t {
               );
           });
           </script> 
+<br>
+<br>
+<br>
+
+<form>
+<select name="brands" onchange="showBrands(this.value)">
+<option value="">Select a brand:</option>
+<option value="1">Swarowski</option>
+<option value="2">Oliver Weber</option>
+<option value="3">Feramox</option>
+</select>
+</form>
+<br>
+<div id="txtHint"><b>Select a brand from the list above and see the information listed here.</b></div>
         
 
 

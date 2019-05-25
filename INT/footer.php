@@ -113,7 +113,8 @@
                    <textarea name="msg" placeholder="Enter your message here..." required></textarea><br>
 
                  
-                   <input type ="submit" name="submit" value="Send" class="button">
+                   <input type ="submit" name="submit" value="Send" class="button"  onclick="myFunction()">
+                  
                    </form>
 
                    
