@@ -5,3 +5,11 @@ INSERT INTO USERS VALUES('eniss', 'c43c055ee148b23953e67678b3e02348d2f43960/3bf2
 Error: Duplicate entry 'eniss' for key 'PRIMARY'
 Login attempt nga: eniss
 Login valid
+Login attempt nga: eniss
+Login valid
+Login attempt nga: enis
+Login valid
+Login attempt nga: eniss
+Login jo-valid
+Login attempt nga: eniss
+Login valid
