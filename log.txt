@@ -1,58 +1,7 @@
-Dikush e ka vizituar register.php
-Dikush e ka vizituar register.php
-Dikush e ka vizituar register.php
-Dikush e ka vizituar register.php
-INSERT INTO USERS VALUES('', '2a7ccc6aa93f8d4c38e988ded537cf433d57c4ac/31393a8602e9c15b788888478c82870c1e564d4d', '','')
-Error: 
-Dikush e ka vizituar register.php
-Dikush e ka vizituar register.php
-INSERT INTO USERS VALUES('', '961a363483051f989c170821c9ad321e0027fbee/f02802f7612db4a1da370b672e689571974a8503', '','')
-Error: 
-Dikush e ka vizituar register.php
-Dikush e ka vizituar register.php
-INSERT INTO USERS VALUES('', '7e1c5c3d77e2ad95e6cd394dd1969f542844d257/2846393f21b82720788ce2b921e66c44526d0c92', '','')
-Error: 
-Dikush e ka vizituar register.php
-Dikush e ka vizituar register.php
-INSERT INTO USERS VALUES('', 'd816213a9288ac4a2bea6b3f65dc0a18772ceea1/c8a16bdaea57929cdb3894a7a8d5290d8ae68f86', '','')
-Error: 
-Dikush e ka vizituar register.php
-Dikush e ka vizituar register.php
-Dikush e ka vizituar register.php
-INSERT INTO USERS VALUES('EndritBajrami', '994a8357cce14923e1460bd5a9b12dcdf557ea75/5235e8391feb160d35b6c6bebace59636ca73c8d', 'endrit','bajrami')
-Error: 
-Dikush e ka vizituar register.php
-Dikush e ka vizituar register.php
-INSERT INTO USERS VALUES('EndritBajra', '9af2b0f869d3ed662ae2baa866e50ab8f4ef6bef/182df63e1bf9b4b3cac1d34e5bf93e045214cdbe', 'endrit','bajrami')
-Error: 
-Dikush e ka vizituar register.php
-Dikush e ka vizituar register.php
-INSERT INTO USERS VALUES('EndritBajrami', '2842b8817f952f4d3e1c3e004c395a596cf59261/f9f439eb8bb8d07500aa04af9babdec216f62630', 'endrit','bajrami')
-Error: 
-Login attempt nga: EndritBajrami
-Login attempt nga: EndritBajrami
-Login valid
-Login attempt nga: as
-Username nuk ekziston
-Login attempt nga: EndritBajrami
-Login valid
-Dikush e ka vizituar register.php
-Dikush e ka vizituar register.php
-Dikush e ka vizituar register.php
-Dikush e ka vizituar register.php
-Dikush e ka vizituar register.php
-Dikush e ka vizituar register.php
-Dikush e ka vizituar register.php
-INSERT INTO USERS VALUES('enishallci', 'abf131ebed17cec7271d3a3d2a5059a098581383/104fb7431ca6c0af0d93213a03c8361a66562c4c', 'enis','shallci')
-Error: 
-Dikush e ka vizituar register.php
-Dikush e ka vizituar register.php
-INSERT INTO USERS VALUES('dardanshabani', 'c351772a572a3c21a814b1d74ce9c7af77d370ef/091f8461b8cea3a27594b192765d16ba0491aab7', 'dardan','shabani')
-Error: 
-Dikush e ka vizituar register.php
 Dikush e ka vizituar signup.php
 Dikush e ka vizituar signup.php
-INSERT INTO USERS VALUES('doruntina', 'fbc663fafe4f6f96a42b407eca2f76443d506c75/dc45a4330556b25c8670ba2d0630e3db79d54e95', 'endrit','bajrami')
-Error: 
-Login attempt nga: doruntina
+Dikush e ka vizituar signup.php
+INSERT INTO USERS VALUES('eniss', 'c43c055ee148b23953e67678b3e02348d2f43960/3bf2821a2a886b13a675cdab3e493c1a6138fdbc', 'eniss','shallcii')
+Error: Duplicate entry 'eniss' for key 'PRIMARY'
+Login attempt nga: eniss
 Login valid
