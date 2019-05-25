@@ -17,6 +17,11 @@ class Database{
         return $result;
     }
 
+    public function __destruct()
+    {
+        mysqli_close($this->db);
+    }
+
 }
 
 
