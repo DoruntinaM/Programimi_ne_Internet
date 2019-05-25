@@ -1,14 +1,8 @@
 <?php
-function writeLog($txt = "") {
-  file_put_contents(__DIR__ . '/../log.txt', $txt . PHP_EOL , FILE_APPEND | LOCK_EX);
-}
-function escape($db, array $strings) {
-  return array_map(
-    function ($str) use ($db) {
-      return $db->real_escape_string($str);
-    }, $strings);
-}
-writeLog('Dikush e ka vizituar signup.php');
+require("Functions.php");
+$functionObj = new Functions();
+
+$functionObj->writeLog('Dikush e ka vizituar signup.php');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   include __DIR__ . '\LidhjaDB.php';
   include __DIR__ . '\SaltedHash.php';
@@ -22,12 +16,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   
   // Db dhe escape
   $db = connectDb();
-  [$escapedUsername, $escapedName,$escapedLastname,] = escape($db, [$username, $name,$Lastname]);
+  [$escapedUsername, $escapedName,$escapedLastname,] = $functionObj->escape($db, [$username, $name,$Lastname]);
   $query = "INSERT INTO USERS VALUES" 
   . "('$escapedUsername', '$passwordHash', '$escapedName','$escapedLastname')";
   $db->query($query);
-  writeLog($query);
-  writeLog('Error: ' . $db->error);
+  $functionObj->writeLog($query);
+  $functionObj->writeLog('Error: ' . $db->error);
   header("Location: login.php"); 
  
 } else { ?>
