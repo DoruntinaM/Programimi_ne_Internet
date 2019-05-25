@@ -1,0 +1,31 @@
+h2{ 
+    color:rgb(56,103, 231);
+             }
+                     pre 
+                     {
+                         border-style: hidden;
+ background: border-box #fffefe;
+ font-size: large;
+ width:77%;
+   }
+                     img 
+                     {
+ height:140;
+ width:130;
+ float:left;
+                     }
+                 table {
+                   font-family: arial, sans-serif;
+                   border-collapse: collapse;
+                   width: 77%;
+                 }
+                 
+                 td, th {
+                   border: 1px solid rgb(56,103,231);
+                   text-align: left;
+                   padding: 6px;
+                 }
+                 
+                 tr:nth-child(even) {
+                   background-color: rgb(56, 103, 231);
+                 }

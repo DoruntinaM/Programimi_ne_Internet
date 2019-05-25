@@ -1,0 +1,19 @@
+park
+hospital
+school
+airport
+bank
+church
+basement
+barber shop
+book store
+bus stop
+bedroom
+kitchen
+bathroom
+theater
+cinema
+museum
+mall
+supermarket
+train station
