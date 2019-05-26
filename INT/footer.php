@@ -33,7 +33,7 @@
             float: left;
             width: 33.33%;
             padding: 10px;
-            height: 350px; 
+            height: 400px; 
         }
         
         
@@ -62,6 +62,28 @@
             background-color: gainsboro;
             border: none;
             font size: 15px;
+        }
+            
+        textarea {
+        
+            background-color: gainsboro;
+            width: 90%;
+            padding: 12px 20px;
+            margin: 4px 15px; 
+            border-radius: 4px;
+            border: none;
+            font size: 15px;
+            }
+            
+        input[type=submit], select {
+            background-color: rgb(197, 52, 52);
+            border: none;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 4px 15px;
         }
         
         
