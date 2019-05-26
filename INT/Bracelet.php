@@ -232,9 +232,9 @@ div.t {
          </div>  
          <h1>Enter Product</h1> 
          <form method='post' action='insert.php'>
-         <input type='text' id='name' name='productname' placeholder='Enter product name'/>
-         <input type='text' id='brand' name='brandname' placeholder='Enter brand name'/>
-         <input type='number' id='quantity' name='quantity' placeholder='Quantity'/>
+         <input type='text' id='name' name='productname' placeholder='Enter product name' required/>
+         <input type='text' id='brand' name='brandname' placeholder='Enter brand name' required/>
+         <input type='number' id='quantity' name='quantity' placeholder='Quantity'required/>
          <button>Save Product</button>
           </form>
 

@@ -29,17 +29,17 @@ public function validateAndsendMailMessage($name,$email,$phone,$message){
     $headers="From: ".$email;
 
     if (!preg_match("/^[a-zA-Z ]*$/",$name))  {
-        array_push($validationMessages, 'Emri duhet t&#235; p&#235;rmbaj&#235; vet&#235;m shkronja !');
+        array_push($validationMessages, 'Emri duhet te permbaje vetem shkronja!');
     }
     if (strlen($name)<3)
     {
-        array_push($validationMessages,'Emri duhet t&#235; p&#235;rmbaj&#235; s&#235; paku 3 shkronja !');
+        array_push($validationMessages,'Emri duhet te permbaje se paku 3 shkronja!');
     }
     if (!preg_match("/^([a-z0-9_\.-]+){4}@([a-z]+){3}\.([a-z\.]{2,6})$/",$email))  {
-        array_push($validationMessages,'Email-i nuk eshte ne formatin e duhur !');
+        array_push($validationMessages,'Email-i nuk eshte ne formatin e duhur!');
     }
     if(!preg_match("/^[0-9]{3}-[0-9]{6}$/", $phone)) {
-        array_push($validationMessages,'Formati i numrit te dhe ne nuk eshte valid!');
+        array_push($validationMessages,'Formati i numrit te dhene nuk eshte valid!');
     } 
 
     if (count($validationMessages)==0){
