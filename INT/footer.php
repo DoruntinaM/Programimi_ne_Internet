@@ -55,11 +55,11 @@
             
         }
         input[type=text], select {
-            width: 100%;
+            width: 90%;
             padding: 12px 20px;
-            margin: 4px 0;
+            margin: 4px 15px;
             border-radius: 4px;
-            background-color: rgb(51, 47, 47);
+            background-color: gainsboro;
             border: none;
             font size: 15px;
         }

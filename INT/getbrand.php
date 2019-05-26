@@ -3,13 +3,15 @@
 <head>
 <style>
 table {
-    width: 100%;
+    width: 90%;
+    padding: 12px 20px;
+    margin: 4px 15px;
     border-collapse: collapse;
 }
 
 table, td, th {
     border: 1px solid black;
-    padding: 5px;
+    padding: 5px ;
 }
 
 th {text-align: left;}

@@ -3,6 +3,7 @@
   
 <head>
 <?php include ('header.php'); ?>
+    
 <script>
 function showBrands(str) {
   if (str=="") {
@@ -229,15 +230,44 @@ div.t {
                 Join this fabulous community as a new member, renew your current membership, or offer <abbr title="LUXURY JEWELLERY">LJ</abbr> membership as a gift.
                 
                 </p>
-         </div>  
-         <h1>Enter Product</h1> 
-         <form method='post' action='insert.php'>
-         <input type='text' id='name' name='productname' placeholder='Enter product name' required/>
-         <input type='text' id='brand' name='brandname' placeholder='Enter brand name' required/>
-         <input type='number' min="1" step="1" id='quantity' name='quantity' placeholder='Quantity'required/>
-         <button>Save Product</button>
-          </form>
+    </div>
 
+</body>
+    
+            <h1><pre>  Enter Product</pre></h1> 
+         <form method='post' action='insert.php'>
+         <input type='text' id='name' name='productname'  placeholder='Enter product name' required />
+         <input type='text' id='brand' name='brandname'  placeholder='Enter brand name' required/>
+         <input type='number' min="1" step="1" id='quantity' name='quantity' placeholder='Quantity'required/><br>
+         <input type="button" value="Save Product">
+    </form>
+    
+    <style>
+     input[type=number], select {
+            width: 90%;
+            padding: 12px 20px;
+            margin: 4px 15px;
+            border-radius: 4px;
+            background-color:gainsboro;
+            border: none;
+            font size: 15px;
+        }
+        
+    input[type=button] {
+  background-color: rgb(197, 52, 52);
+            border: none;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 4px 15px;
+}
+</style>
+
+       
+    
+          
           <p id="result"></p> 
 
 
@@ -278,15 +308,14 @@ div.t {
 <option value="3">Feramox</option>
 </select>
 </form>
-<br>
-<div id="txtHint"><b>Select a brand from the list above and see the information listed here.</b></div>
+    <div id="txtHint"><b><h3><pre>  Select a brand from the list above and see the information listed here.</pre></h3></b></div>
         
 
 
-</body>
+
 
 <?php include ('footer.php'); ?>
-    
+
      </html>
 
 
