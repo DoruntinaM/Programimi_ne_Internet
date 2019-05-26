@@ -239,7 +239,7 @@ div.t {
          <input type='text' id='name' name='productname'  placeholder='Enter product name' required />
          <input type='text' id='brand' name='brandname'  placeholder='Enter brand name' required/>
          <input type='number' min="1" step="1" id='quantity' name='quantity' placeholder='Quantity'required/><br>
-         <input type="button" value="Save Product">
+         <button>Save Product</button>
     </form>
     
     <style>
@@ -253,7 +253,7 @@ div.t {
             font size: 15px;
         }
         
-    input[type=button] {
+    button {
   background-color: rgb(197, 52, 52);
             border: none;
             color: white;
@@ -283,9 +283,9 @@ div.t {
                 },
                 function(result){
                   if(result == "success"){
-                     $("#result").html("Values inserted successfully");
+                     $("#result").html(" Values inserted successfully");
                   }else{
-                      $("#result").html("Error occured");
+                      $("#result").html(" Error occured");
                     
 
 
