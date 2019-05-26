@@ -234,7 +234,7 @@ div.t {
          <form method='post' action='insert.php'>
          <input type='text' id='name' name='productname' placeholder='Enter product name' required/>
          <input type='text' id='brand' name='brandname' placeholder='Enter brand name' required/>
-         <input type='number' id='quantity' name='quantity' placeholder='Quantity'required/>
+         <input type='number' min="1" step="1" id='quantity' name='quantity' placeholder='Quantity'required/>
          <button>Save Product</button>
           </form>
 
