@@ -13,11 +13,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $Lastname = $_POST['lastname'];
   $password = $_POST['password'];
   $passwordHash = createPassword($password);
-  
+  public function validimSignup($username,$name,$Lastname,$password){
   // Db dhe escape
   $db = connectDb();
   [$escapedUsername, $escapedName,$escapedLastname,] = $functionObj->escape($db, [$username, $name,$Lastname]);
-  $query = "INSERT INTO USERS VALUES" 
+  $query = "INSERT INTO USERS (username,password,fName,Sirname) VALUES " 
   . "('$escapedUsername', '$passwordHash', '$escapedName','$escapedLastname')";
   $db->query($query);
   $functionObj->writeLog($query);
@@ -60,28 +60,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 								</select>(Optional)
                              
            					<button class="btn-signup" onclick="myfunction1()" type="submit" name="signup" >Sign Up</button>
-                               <script>
-                                        function myfunction1()
-                                {   var x=document.forms["Form1"]["username"].value;
-                                var y=document.forms["Form1"]["password"].value;
-                                var z=document.forms["Form1"]["firstname"].value;
-                                var v=document.forms["Form1"]["lastname"].value;
-
-                                if(x=="")
-                                   alert("In order to sign in username must be filled");
-                                   else
-                                       if(y=="")
-                                        alert("In order to sign in password must be filled");
-                                        else 
-                                           if(z=="")
-                                           alert("In order to sign in first name must be filled");
-                                           else 
-                                               if(v=="")
-                                               alert("In order to sign in last name must be filled");
-                                               else
-                                    alert("You have successfully loged in.");
-                                }
-                                </script>
                             </form>
                             <?php
                             foreach ($_FILES as $key=>$value)
