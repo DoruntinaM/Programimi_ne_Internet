@@ -6,24 +6,37 @@ $functionObj->writeLog('Dikush e ka vizituar signup.php');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   include __DIR__ . '\LidhjaDB.php';
   include __DIR__ . '\SaltedHash.php';
-  
+  function testoInputet($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
   // Parametrat
-  $username = $_POST['username'];
-  $name = $_POST['name'];
-  $Lastname = $_POST['lastname'];
-  $password = $_POST['password'];
+  $username = testoInputet($_POST['username']);
+  $name = testoInputet($_POST['name']);
+  $Lastname = testoInputet($_POST['lastname']);
+  $password = testoInputet($_POST['password']);
   $passwordHash = createPassword($password);
-  
+  if(!preg_match("/^[a-zA-Z ]*$",$name)){
+      $nameErr = true;
+  }if(!preg_match("/^[a-zA-Z ]*$",$Lastname)){
+      $LastnameErr = true;
+  }if(!preg_match("/^[A-Za-z][A-Za-z0-9]{5,31}$/",$username)){
+      $usernameErr = true;
+  }if(!preg_match("^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\W])(?=\S*[\d])\S*$",$password)){
+      $passwordErr = true;
+  }
+    
   // Db dhe escape
   $db = connectDb();
   [$escapedUsername, $escapedName,$escapedLastname,] = $functionObj->escape($db, [$username, $name,$Lastname]);
-  $query = "INSERT INTO USERS VALUES" 
+  $query = "INSERT INTO USERS (username,password,fName,Sirname) VALUES " 
   . "('$escapedUsername', '$passwordHash', '$escapedName','$escapedLastname')";
   $db->query($query);
   $functionObj->writeLog($query);
   $functionObj->writeLog('Error: ' . $db->error);
   header("Location: login.php"); 
- 
 } else { ?>
 <!DOCTYPE html>
 <html>
@@ -35,11 +48,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
     <style>
 			
-            body
+            .body
 				{
 					background-attachment: fixed;
 					background-size: 100% 100%;
+                   
+                    
 				}
+        
+        
+            
 		</style>
                  <div id="container"><br>
                      <div id="signup-right">
@@ -54,34 +72,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                           
                                     <input type='file' name='file1' id='file1' />(Optional)
 							
-								<select id="passwordsignup"  name="gender" required >
+								<select id="passwordsignup"  name="gender"  placeholder="Gender" required="required">
+                                        <option>Gender</option>
 										<option>Male</option>
 										<option>Female</option>
 								</select>(Optional)
                              
            					<button class="btn-signup" onclick="myfunction1()" type="submit" name="signup" >Sign Up</button>
-                               <script>
-                                        function myfunction1()
-                                {   var x=document.forms["Form1"]["username"].value;
-                                var y=document.forms["Form1"]["password"].value;
-                                var z=document.forms["Form1"]["firstname"].value;
-                                var v=document.forms["Form1"]["lastname"].value;
-
-                                if(x=="")
-                                   alert("In order to sign in username must be filled");
-                                   else
-                                       if(y=="")
-                                        alert("In order to sign in password must be filled");
-                                        else 
-                                           if(z=="")
-                                           alert("In order to sign in first name must be filled");
-                                           else 
-                                               if(v=="")
-                                               alert("In order to sign in last name must be filled");
-                                               else
-                                    alert("You have successfully loged in.");
-                                }
-                                </script>
                             </form>
                             <?php
                             foreach ($_FILES as $key=>$value)
