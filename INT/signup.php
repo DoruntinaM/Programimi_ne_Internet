@@ -48,11 +48,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
     <style>
 			
-            body
+            .body
 				{
 					background-attachment: fixed;
 					background-size: 100% 100%;
+                   
+                    
 				}
+        
+        
+            
 		</style>
                  <div id="container"><br>
                      <div id="signup-right">
