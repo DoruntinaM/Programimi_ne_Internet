@@ -50,7 +50,7 @@ session_start();
                                 <a href="Produktet-Rings.php">RINGS</a>
                                 <a href="Produktet-Earrings.php">EARRINGS</a> 
                                 <a href="Bracelet.php">BRACELETS</a>
-                                <a href="contactus.php">CONTACT US</a>
+                                <a href="contactus.php">CONTACT</a>
                                 
                             </font>
                             </td>

@@ -243,7 +243,7 @@ foreach($brand as $x => $x_value) {
            
 
 </body>
-
+<br>
 <?php include ('footer.php'); ?>
     
      </html>
