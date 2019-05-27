@@ -72,7 +72,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                           
                                     <input type='file' name='file1' id='file1' />(Optional)
 							
-								<select id="passwordsignup"  name="gender" required >
+								<select id="passwordsignup"  name="gender"  placeholder="Gender" required="required">
+                                        <option>Gender</option>
 										<option>Male</option>
 										<option>Female</option>
 								</select>(Optional)

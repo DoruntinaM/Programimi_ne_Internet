@@ -6,12 +6,12 @@
 
 body
 	{
-		font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+		/*font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;*/
 		font-size: 18px;
 		line-height: 18px;
 		background-color: #e9eaed;
 		color: #000;
-		width: 100%;
+		width: 300px;
 
 	}
 
