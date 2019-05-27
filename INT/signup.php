@@ -6,14 +6,28 @@ $functionObj->writeLog('Dikush e ka vizituar signup.php');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   include __DIR__ . '\LidhjaDB.php';
   include __DIR__ . '\SaltedHash.php';
-  
+  function testoInputet($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
   // Parametrat
-  $username = $_POST['username'];
-  $name = $_POST['name'];
-  $Lastname = $_POST['lastname'];
-  $password = $_POST['password'];
+  $username = testoInputet($_POST['username']);
+  $name = testoInputet($_POST['name']);
+  $Lastname = testoInputet($_POST['lastname']);
+  $password = testoInputet($_POST['password']);
   $passwordHash = createPassword($password);
-  public function validimSignup($username,$name,$Lastname,$password){
+  if(!preg_match("/^[a-zA-Z ]*$",$name)){
+      $nameErr = true;
+  }if(!preg_match("/^[a-zA-Z ]*$",$Lastname)){
+      $LastnameErr = true;
+  }if(!preg_match("/^[A-Za-z][A-Za-z0-9]{5,31}$/",$username)){
+      $usernameErr = true;
+  }if(!preg_match("^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\W])(?=\S*[\d])\S*$",$password)){
+      $passwordErr = true;
+  }
+    
   // Db dhe escape
   $db = connectDb();
   [$escapedUsername, $escapedName,$escapedLastname,] = $functionObj->escape($db, [$username, $name,$Lastname]);
@@ -23,7 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $functionObj->writeLog($query);
   $functionObj->writeLog('Error: ' . $db->error);
   header("Location: login.php"); 
- 
 } else { ?>
 <!DOCTYPE html>
 <html>
