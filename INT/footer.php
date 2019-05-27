@@ -65,7 +65,7 @@
         }
             
         textarea {
-        
+            resize: none;
             background-color: gainsboro;
             width: 90%;
             padding: 12px 20px;
