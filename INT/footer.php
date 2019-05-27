@@ -33,7 +33,7 @@
             float: left;
             width: 33.33%;
             padding: 10px;
-            height: 350px; 
+            height: 400px; 
         }
         
         
@@ -55,13 +55,35 @@
             
         }
         input[type=text], select {
-            width: 100%;
+            width: 90%;
             padding: 12px 20px;
-            margin: 4px 0;
+            margin: 4px 15px;
             border-radius: 4px;
-            background-color: rgb(51, 47, 47);
+            background-color: gainsboro;
             border: none;
             font size: 15px;
+        }
+            
+        textarea {
+        
+            background-color: gainsboro;
+            width: 90%;
+            padding: 12px 20px;
+            margin: 4px 15px; 
+            border-radius: 4px;
+            border: none;
+            font size: 15px;
+            }
+            
+        input[type=submit], select {
+            background-color: rgb(197, 52, 52);
+            border: none;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 4px 15px;
         }
         
         
@@ -102,7 +124,7 @@
             
             <div>
       
-                   <form action="mail_handler.php" method="post" name="form" >
+                   <form action="" method="post" name="form" >
                    <label for="name">Name</label><br>
                    <input type ="text" name="name" placeholder="Enter your name" required><br>
                    <label for="email">Email</label><br>
@@ -116,6 +138,58 @@
                    <input type ="submit" name="submit" value="Send" class="button"  onclick="myFunction()">
                   
                    </form>
+   
+   
+                   
+                   
+   
+   <!-- mail_handler -->
+                   <?php 
+
+require('Validation.php');
+
+$mailobj=new Validation('doruntina.murtezaj@gmail.com');
+$to = $mailobj->getTo();
+$mailobj->setSubject('Form Submission');
+$subject=$mailobj->getSubject();
+
+if (isset($_POST['submit'])){
+    $name =$_POST['name'];
+    $email =$_POST['email'];
+    $phone=$_POST['phone'];
+    $msg=$_POST['msg'];
+    $message="Name: ".$name."\n"."Phone: ".$phone."\n"."Wrote the following: "."\n\n".$msg;
+    $messages = $mailobj->validateAndsendMailMessage($_POST['name'],$_POST['email'], $_POST['phone'], $message);
+
+    echo "<script language='Javascript'>alert('{$messages[0]}');</script>";
+
+   
+/*
+        if(mail($to,$subject,$message,$headers)){
+        
+            // echo"<h1>Sent Successfully! Thank you"." ".$name.",We will contact you shortly!</h1>";
+            // header("Location: LJ.php");
+            echo('<script language="Javascript">alert("Sent Successfully!");</script>');
+        }
+        else {
+            // echo "Something went wrong!";
+            // header("Location: LJ.php");
+            echo('<script language="Javascript">alert("Something went wrong!");</script>');
+        }
+*/
+        
+    }   
+
+
+
+
+
+ ?>
+ <!-- perfundim i mail_handler -->
+
+
+
+
 
                    
  

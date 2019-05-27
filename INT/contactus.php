@@ -5,6 +5,7 @@
     <?php include ('header.php'); ?>
     <br>
     <br>
+    <div id="permbajtja">
     <h3>If you want to know which brands you can find at Luxury Jewelry, please start typing a name in the input field below:</h3>
 
 
@@ -30,7 +31,18 @@ function showHint(str) {
   xhttp.send();   
 }
 </script>
-
+    </div>
+    
+    
+    <style>
+   .permbajatja { 
+  color: white; 
+  background-color: 009900; 
+  margin: 2px; 
+  font-size: 25px; 
+} 
+    
+    </style>
     
 </head>
 <body>
@@ -147,6 +159,7 @@ echo $text . "\n";
 <br>
 <br>
 <br>
+                </td>
         </table>
     </div>
     </div>
