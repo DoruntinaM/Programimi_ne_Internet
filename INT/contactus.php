@@ -5,15 +5,18 @@
     <?php include ('header.php'); ?>
     <br>
     <br>
-    <div id="permbajtja">
+    
+    <div class="permbajtja">
+        
+    <div class="tekstia">
     <h3>If you want to know which brands you can find at Luxury Jewelry, please start typing a name in the input field below:</h3>
+    </div>
 
-
-
-<p>Name of Brand: <input type="text" id="txt1" onkeyup="showHint(this.value)"></p>
+<div class="tt">
+<p>Name of Brand: <input type="text" name="brendi" id="txt1" onkeyup="showHint(this.value)" placeholder="Type here..."></p>
 
 <p>Suggestions: <span id="txtHint"></span></p> 
-
+        </div>
 <script>
 function showHint(str) {
   var xhttp;
@@ -35,12 +38,36 @@ function showHint(str) {
     
     
     <style>
+        .tt{
+            margin-left: 400px;
+            text-decoration-color: black;
+        }
+        
+input[name=brendi], select {
+            width: 30%;
+            padding: 12px 20px;
+            margin: 4px 15px;
+            border-radius: 4px;
+            background-color: lightgray;
+            border: none;
+            margin-left: 10px;
+            font size: 15px;
+            margin-bottom: 10px;
+            text-decoration-color: black;
+    
+        }
+        
    .permbajatja { 
   color: white; 
   background-color: 009900; 
   margin: 2px; 
   font-size: 25px; 
+  margin-left: 100px;
+    
 } 
+        .tekstia{
+            text-align: center;
+        }
     
     </style>
     
@@ -68,8 +95,8 @@ function showHint(str) {
                     
                 <?php
 
- $text = " <h2><pre>    I was _VERB_ing in the _PLACE_ when I found a _NOUN_.
-    Then I had to go to the _PLACE_.<pre></h2>";
+ $text = " <h3> I was _VERB_ing in the _PLACE_ when I found a _NOUN_.<br>
+            Then I had to go to the _PLACE_.</h3>";
 
 $verbs = explode("\n", file_get_contents("words.verbs.txt"));
 $places = explode("\n", file_get_contents("words.places.txt"));

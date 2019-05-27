@@ -214,11 +214,7 @@ div.t {
          </div>
          </div>
          </div>
-    
-<br>
-<br>
-    
-    
+ 
 <br>
 <br>
 <div class="t">
@@ -233,24 +229,45 @@ div.t {
     </div>
 
 </body>
-    
-            <h1><pre>  Enter Product</pre></h1> 
+    <br>
+    <br>
+    <div class=divii>
+     <h1>  Enter Product</h1> 
+        
+    </div>
          <form method='post' action='insert.php'>
          <input type='text' id='name' name='productname'  placeholder='Enter product name' required />
+            <br>
          <input type='text' id='brand' name='brandname'  placeholder='Enter brand name' required/>
+             <br>
          <input type='number' min="1" step="1" id='quantity' name='quantity' placeholder='Quantity'required/><br>
          <button>Save Product</button>
     </form>
     
     <style>
-     input[type=number], select {
-            width: 90%;
+        
+        input[type=text],select {
+             width: 40%;
             padding: 12px 20px;
             margin: 4px 15px;
             border-radius: 4px;
             background-color:gainsboro;
             border: none;
             font size: 15px;
+            margin-left: 300px;
+            
+        }
+        
+     input[type=number], select {
+            width: 40%;
+            padding: 12px 20px;
+            margin: 4px 15px;
+            border-radius: 4px;
+            background-color:gainsboro;
+            border: none;
+            font size: 15px;
+            margin-left: 300px;
+            
         }
         
     button {
@@ -262,7 +279,26 @@ div.t {
             font-size: 16px;
             cursor: pointer;
             margin: 4px 15px;
+           margin-left: 705px;
 }
+        
+        .divii{
+            margin-left: 450px;
+        }
+        
+        .opsionett{
+            width: 40%;
+            padding: 12px 20px;
+            margin: 4px 15px;
+            border-radius: 4px;
+            border: none;
+            font size: 15px;
+            margin-left: 300px;
+        }
+        
+        .fundii{
+             margin-left: 280px;
+        }
 </style>
 
        
@@ -299,19 +335,24 @@ div.t {
 <br>
 <br>
 <br>
-
+<div class="fundii">
+        <h3><b>  Select a brand from the list below and see the information listed here.</b></h3>
+    </div>
+<div class="opsionett">
 <form>
 <select name="brands" onchange="showBrands(this.value)">
-<option value="">Select a brand:</option>
+<option  value="">Select a brand:</option>
 <option value="1">Swarowski</option>
 <option value="2">Oliver Weber</option>
 <option value="3">Feramox</option>
 </select>
 </form>
-    <div id="txtHint"><b><h3><pre>  Select a brand from the list above and see the information listed here.</pre></h3></b></div>
-        
+    </div>
+    
+    <div id="txtHint"></div>
+    
 
-
+<br><br>
 
 
 <?php include ('footer.php'); ?>
