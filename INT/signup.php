@@ -1,7 +1,8 @@
 <?php
 require("Functions.php");
+include ('header.php');
+unset($_SESSION['mesazhi']);
 $functionObj = new Functions();
-
 $functionObj->writeLog('Dikush e ka vizituar signup.php');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   include __DIR__ . '\LidhjaDB.php';
@@ -19,18 +20,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $password = testoInputet($_POST['password']);
   $passwordHash = createPassword($password);
   $passwordErr = $usernameErr = $passwordErr = $nameErr = $LastnameErr = " ";
-  if(empty($name) || !preg_match("/^[a-zA-Z ]*$",$name)){
-      $nameErr = "Emri duhet te permbaje vetem shkronja!";
-  }if(empty($Lastname) || !preg_match("/^[a-zA-Z ]*$",$Lastname)){
-      $LastnameErr = "Mbiemri duhet te permbaje vetem shkronja!";
-  }if(empty($username) || !preg_match("/^[A-Za-z][A-Za-z0-9]{5,31}$/",$username)){
-      $usernameErr = "Username mund te permbaje vetem shkronja dhe numra!";
-  }if(empty($password) || !preg_match("^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\W])(?=\S*[\d])\S*$",$password)){
-      $passwordErr = "Passwordi duhet te permbaje se paku 8 karaktere, se paku nje numer, nje shkronje te vogel dhe nje shkronje te madhe!";
-    }
-if((strlen($nameErr)>1) || (strlen( $LastnameErr)>1) || (strlen($usernameErr)>1) || (strlen($passwordErr)>1)){
-    header("location: signup.php");
-}else{
+  if(empty($name) || !preg_match("/^([a-zA-Z' ]+)$/",$name)){
+      $_SESSION['nameErr'] = "Emri duhet te permbaje vetem shkronja!";
+  }else{unset($_SESSION['nameErr']);}
+  if(empty($Lastname) || !preg_match("/^([a-zA-Z' ]+)$/",$Lastname)){
+      $_SESSION['LastnameErr'] = "Mbiemri duhet te permbaje vetem shkronja!";
+  }else{unset($_SESSION['LastnameErr']);}
+  if(empty($username) || !preg_match("/^[A-Za-z][A-Za-z0-9]{5,31}$/",$username)){
+      $_SESSION['usernameErr'] = "Username mund te permbaje vetem shkronja dhe numra!";
+  }else{unset($_SESSION['usernameErr']);}
+  if(empty($password) || !preg_match("/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$/",$password)){
+      $_SESSION['passwordErr'] = "Passwordi duhet te permbaje se paku 8 karaktere, se paku nje numer, nje shkronje te vogel dhe nje shkronje te madhe!";
+  }else{unset($_SESSION['passwordErr']);}
+
 
     
   // Db dhe escape
@@ -38,6 +40,11 @@ if((strlen($nameErr)>1) || (strlen( $LastnameErr)>1) || (strlen($usernameErr)>1)
   [$escapedUsername, $escapedName,$escapedLastname,] = $functionObj->escape($db, [$username, $name,$Lastname]);
   $query = "INSERT INTO USERS (username,password,fName,Sirname) VALUES " 
   . "('$escapedUsername', '$passwordHash', '$escapedName','$escapedLastname')";
+  if((strlen( $_SESSION['nameErr'])>1) || (strlen(  $_SESSION['LastnameErr'])>1) || (strlen($_SESSION['usernameErr'])>1) || (strlen($_SESSION['passwordErr'])>1)){
+    for($i=0;$i<2;$i++){
+    header("location: signup.php");
+    }
+}else{
   $db->query($query);
   $functionObj->writeLog($query);
   $functionObj->writeLog('Error: ' . $db->error);
@@ -45,7 +52,6 @@ if((strlen($nameErr)>1) || (strlen( $LastnameErr)>1) || (strlen($usernameErr)>1)
 } else { ?>
 <!DOCTYPE html>
 <html>
-    <?php include ('header.php'); ?>
 <body>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,13 +77,21 @@ if((strlen($nameErr)>1) || (strlen( $LastnameErr)>1) || (strlen($usernameErr)>1)
                                 <h2> Sign Up </h2> 
 							
                                     <input class="long"  name="username" type="text" placeholder="Username" /> 
-                                    <?php echo $usernameErr?>                          
+                                    <?php if(isset($_SESSION['usernameErr'])){
+                                    echo $_SESSION['usernameErr'];
+                                    }?>                          
                                     <input class="long"  name="password" type="password" placeholder="Password"/> 
-                                    <?php echo $passwordErr ?>                      
+                                    <?php if(isset($_SESSION['passwordErr'])){
+                                    echo $_SESSION['passwordErr'];
+                                    }?>                        
                                     <input  class="name"  name="name" type="text" placeholder="First Name"/>
-                                    <?php echo $nameErr  ?>                     
+                                    <?php if(isset($_SESSION['nameErr'])){
+                                    echo $_SESSION['nameErr'];
+                                    }?>                     
                                     <input  class="name"  name="lastname" type="text" placeholder="Last Name"/>
-                                    <?php echo $LastnameErr?>                      
+                                    <?php if(isset($_SESSION['LastnameErr'])){
+                                    echo $_SESSION['LastnameErr'];
+                                    }?>                      
 
                                           
                                     <input type='file' name='file1' id='file1' accept="image/x-png,image/gif,image/jpeg"/>Photo(Optional)
