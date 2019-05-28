@@ -34,3 +34,130 @@ Dikush e ka vizituar signup.php
 Dikush e ka vizituar signup.php
 Dikush e ka vizituar signup.php
 Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+INSERT INTO USERS (username,password,fName,Sirname) VALUES ('1', '1b1ff29a1e6a371b40552df13695eb04aa55d14a/e27c82a54e264657a85a14a6901d9f3face5e30e', '3','4')
+Error: Duplicate entry '1' for key 'PRIMARY'
+Login attempt nga: 1
+Login jo-valid
+Login attempt nga: 1
+Login jo-valid
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+INSERT INTO USERS (username,password,fName,Sirname) VALUES ('Doruntina', '93e962088f85c52479c644334eb46b6c8fc3f6a5/c99b87d9c7030f34eab4d0420924308b92fb3b80', 'tuina','murtezaj')
+Error: Duplicate entry 'Doruntina' for key 'PRIMARY'
+Login attempt nga: Doruntina
+Login jo-valid
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+INSERT INTO USERS (username,password,fName,Sirname) VALUES ('Doruntina', 'f66fedd532a75ac7305189ea7afa13c4d712bb95/55015b8e67ffcbb702e5ff59c822b7374b907f83', 'tuina','murtezaj')
+Error: Duplicate entry 'Doruntina' for key 'PRIMARY'
+Login attempt nga: Doruntina
+Login jo-valid
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+INSERT INTO USERS (username,password,fName,Sirname) VALUES ('Doruntina', 'b5783ea2d76bb861db8e7593fd363d4ceb06be31/9fde177178be502ee3304900946a2a08105cc837', 'tuina','murtezaj')
+Error: Duplicate entry 'Doruntina' for key 'PRIMARY'
+Login attempt nga: Doruntina
+Login valid
+Login attempt nga: Doruntina
+Login valid
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+INSERT INTO USERS (username,password,fName,Sirname) VALUES ('Liza', 'be51c70733194b2410a30a82c4f5a5183336d9c9/87729a7637a401e75b3cab46f491c73bff09f6fe', 'Liza','Ajvazi')
+Error: 
+Login attempt nga: Liza
+Login valid
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+INSERT INTO USERS (username,password,fName,Sirname) VALUES ('1', 'f2e1081ae515a14ecea344a17ff7beff229fd757/4bc91da80de43444c546edb9903aa9cda1f9135b', 'tuina','murtezaj')
+Error: Duplicate entry '1' for key 'PRIMARY'
+Login attempt nga: 1
+Login jo-valid
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php

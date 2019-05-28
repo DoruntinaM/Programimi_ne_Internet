@@ -15,7 +15,7 @@ body
 
 	}
 
-#container 
+#container
 	{
 		width: 1165px;
 		margin: 15px auto 0px auto;
@@ -48,7 +48,8 @@ body
 		padding: 7px;
 		background-color:rgb(197, 52, 52);
 		cursor: pointer;
-        width: 30px;
+        width: 300px;
+        margin-left: 0px;
         
         
 
@@ -59,12 +60,14 @@ body
 		
 		font-family: Calibri;
 		font-size: 18px;
-		line-height: 25px;
+		line-height: 18px;
         border-radius: 5px;
 		border: 1px solid #888;
 		padding: 7px;
 		margin-bottom: 5px;
         background-color: white;
+        width: 300px;
+        margin-left: 0px;
         
         
 		
@@ -73,8 +76,10 @@ body
 .long
 	{
     
-	width: 350px;
-    
+	margin-left: 0px;
+    width: auto;
+        
+
 	}
 
 #signup-left
@@ -106,14 +111,17 @@ body
 	}
 
 #passwordsignup{
-    font-family: Calibri;
+        font-family: Calibri;
 		font-size: 18px;
 		line-height: 25px;
         border-radius: 5px;
 		border: 1px solid #888;
-		padding: 5px;
+		padding: 7px;
 		margin-bottom: 5px;
-        background-color: white;
+        background-color: darkgrey;
+        margin-left: 0px;
+        width: 300px;
+        
         
 }
 .clear

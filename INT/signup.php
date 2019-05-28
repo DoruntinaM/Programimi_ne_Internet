@@ -57,7 +57,12 @@ if((strlen($nameErr)>1) || (strlen( $LastnameErr)>1) || (strlen($usernameErr)>1)
 				{
 					background-attachment: fixed;
 					background-size: 100% 100%;
+                   
+                    
 				}
+        
+        
+            
 		</style>
                  <div id="container"><br>
                      <div id="signup-right">
@@ -75,9 +80,10 @@ if((strlen($nameErr)>1) || (strlen( $LastnameErr)>1) || (strlen($usernameErr)>1)
                                     <?php echo $LastnameErr?>                      
 
                                           
-                                    <input type='file' name='file1' id='file1' />(Optional)
+                                    <input type='file' name='file1' id='file1' />Photo(Optional)
 							
-								<select id="passwordsignup"  name="gender" required >
+								<select id="passwordsignup"  name="gender"  placeholder="Gender" required="required">
+                                        <option>Gender</option>
 										<option>Male</option>
 										<option>Female</option>
 								</select>(Optional)

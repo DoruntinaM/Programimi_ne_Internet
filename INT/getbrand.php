@@ -3,18 +3,23 @@
 <head>
 <style>
 table {
-    width: 90%;
+    width: 80%;
     padding: 12px 20px;
     margin: 4px 15px;
     border-collapse: collapse;
+    margin-left: 100px;
+    align-content: center;
+    text-align: center;
 }
 
 table, td, th {
     border: 1px solid black;
     padding: 5px ;
+    margin-left: 100px;
 }
 
-th {text-align: left;}
+th {text-align: center;}
+    
 </style>
 </head>
 <body>

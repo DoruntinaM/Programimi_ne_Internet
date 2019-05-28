@@ -54,7 +54,7 @@
             
             
         }
-        input[type=text], select {
+        input[name="name"],input[name="email"],input[name="phone"] ,select {
             width: 90%;
             padding: 12px 20px;
             margin: 4px 15px;
@@ -65,7 +65,7 @@
         }
             
         textarea {
-        
+            resize: none;
             background-color: gainsboro;
             width: 90%;
             padding: 12px 20px;

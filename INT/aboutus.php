@@ -154,17 +154,11 @@
       </video>
     <br>
         <br>
-        <audio controls>
-            <source src="pictures/welcome.mp3" type="audio/mp3">
-        </audio>
+        
         <br>
         <br>
         <br>
-        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
-    <input type="range" id="a" value="50">100
-    +<input type="number" id="b" value="50">
-    =<output name="x" for="a b"></output>
-    </form>
+ 
     <br>
     
                             

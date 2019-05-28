@@ -2,20 +2,7 @@
 include('LidhjaDB.php');
 
 $name=$_POST['productname'];
-
-if (!preg_match("/^[a-zA-Z ]*$/",$name))  {
-   echo  'Emri duhet te permbaje vetem shkronja!';
-  
-
-
-}
-
 $brand=$_POST['brandname'];
-
-if (!preg_match("/^[a-zA-Z ]*$/",$brand))  {
-    echo  'Brendi duhet te permbaje vetem shkronja!';
- }
-
 $quantity=$_POST['quantity'];
 
 $con = connectDB();

@@ -15,20 +15,20 @@ body
 
 	}
 
-#container
+#container /*pjesa tekstit majtas*/
 	{
 		width: 1000px;
 		margin: 15px auto 0px auto;
 	}
 	
 
-#login-right
+#login-right /*username*/
 	{
 		float: right;
 		width: 30%;
 	}
 
-#login-right h2 /*login*/
+#login-right h2 /*login krejt bashke*/
 	{
 		color: #fff;
 		text-shadow: 1px 1px 3px #000;
@@ -58,12 +58,15 @@ body
 
 .short-pass /*password*/
 	{
+    
 		width: 300px;
         background-color:white;
+        
 	}
+
 #login-right input /*username*/
 	{
-		
+		width: 300px;
 		font-family: Calibri;
 		font-size: 18px;
 		line-height: 18px;
@@ -71,12 +74,11 @@ body
 		border: 1px solid #888;
 		padding: 5px;
 		margin-bottom: 3px;
+        margin-left: 0px;
         background-color: white;
-    
-        
-		
-	}
-#login-left
+    }
+
+#login-left /*space poshte majtas*/
 	{
 		float: left;
 		width: 60%;
@@ -84,7 +86,7 @@ body
 	}
 	
 	
-#login-left p
+#login-left p /*teksti ne anen e majte*/
 		{
 			color: #fff;
 			text-shadow: 1px 1px 5px #000;
@@ -92,8 +94,8 @@ body
 			line-height: 35px;
 			text-align: center;
 		}
-		
-#login-left h1
+	
+#login-left h1 /*space nalt majtas*/
 	{
 		color: #fff;
 		text-shadow: 1px 1px 3px #000;
@@ -102,6 +104,7 @@ body
 		text-align: center;
 		margin-top: 100px;
 	}
+
 .clear
 	{
 		clear: both;
