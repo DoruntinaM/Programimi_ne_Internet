@@ -44,6 +44,8 @@ public function validateAndsendMailMessage($name,$email,$phone,$message){
 
     if (count($validationMessages)==0){
         $sendMailMessage = $this->sendMail($this->to,$this->subject,$message,$headers);
+        array_push($validationMessages,'Te dhenat jane valide!');
+       
     }
     return $validationMessages;
 }
