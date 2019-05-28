@@ -319,9 +319,9 @@ div.t {
                 },
                 function(result){
                   if(result == "success"){
-                     $("#result").html(" Values inserted successfully");
+                     $("#result").html("Values inserted successfully");
                   }else{
-                      $("#result").html(" Error occured ");
+                      $("#result").html("Error occured!");
                     
 
 
