@@ -80,7 +80,7 @@ if((strlen($nameErr)>1) || (strlen( $LastnameErr)>1) || (strlen($usernameErr)>1)
                                     <?php echo $LastnameErr?>                      
 
                                           
-                                    <input type='file' name='file1' id='file1' />Photo(Optional)
+                                    <input type='file' name='file1' id='file1' accept="image/x-png,image/gif,image/jpeg"/>Photo(Optional)
 							
 								<select id="passwordsignup"  name="gender"  placeholder="Gender" required="required">
                                         <option>Gender</option>
