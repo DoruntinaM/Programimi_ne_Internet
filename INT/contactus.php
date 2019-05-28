@@ -143,6 +143,18 @@ echo $text . "\n";
                 <br>
                 Visit us at : Schulstraße 40,13347 Berlin,Germany
                 <br>
+
+<!-- Perdorimi i preg_split -->
+                <?php
+                $address = "Schulstraße 40,13347 Berlin,Germany";
+$arr = preg_split('/\,/', $address);
+while (list($key, $value) = each ($arr))
+    echo "<br/>".$value;
+    ?>
+
+
+
+                <br>
                 <br>
                 
                     

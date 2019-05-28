@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     <input  class="name"  name="name" required="required" type="text" placeholder="First Name"/>
                                     <input  class="name"  name="lastname" required="required" type="text" placeholder="Last Name"/>
                                           
-                                    <input type='file' name='file1' id='file1' />(Optional)
+                                    <input type='file' name='file1' id='file1' />Photo(Optional)
 							
 								<select id="passwordsignup"  name="gender"  placeholder="Gender" required="required">
                                         <option>Gender</option>

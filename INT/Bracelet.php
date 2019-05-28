@@ -321,7 +321,7 @@ div.t {
                   if(result == "success"){
                      $("#result").html(" Values inserted successfully");
                   }else{
-                      $("#result").html("Error occured, be careful name and brand should contain only letters!");
+                      $("#result").html(" Error occured ");
                     
 
 
