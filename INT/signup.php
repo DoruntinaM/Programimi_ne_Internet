@@ -18,15 +18,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $Lastname = testoInputet($_POST['lastname']);
   $password = testoInputet($_POST['password']);
   $passwordHash = createPassword($password);
-  if(!preg_match("/^[a-zA-Z ]*$",$name)){
-      $nameErr = true;
-  }if(!preg_match("/^[a-zA-Z ]*$",$Lastname)){
-      $LastnameErr = true;
-  }if(!preg_match("/^[A-Za-z][A-Za-z0-9]{5,31}$/",$username)){
-      $usernameErr = true;
-  }if(!preg_match("^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\W])(?=\S*[\d])\S*$",$password)){
-      $passwordErr = true;
-  }
+  $passwordErr = $usernameErr = $passwordErr = $nameErr = $LastnameErr = " ";
+  if(empty($name) || !preg_match("/^[a-zA-Z ]*$",$name)){
+      $nameErr = "Emri duhet te permbaje vetem shkronja!";
+  }if(empty($Lastname) || !preg_match("/^[a-zA-Z ]*$",$Lastname)){
+      $LastnameErr = "Mbiemri duhet te permbaje vetem shkronja!";
+  }if(empty($username) || !preg_match("/^[A-Za-z][A-Za-z0-9]{5,31}$/",$username)){
+      $usernameErr = "Username mund te permbaje vetem shkronja dhe numra!";
+  }if(empty($password) || !preg_match("^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\W])(?=\S*[\d])\S*$",$password)){
+      $passwordErr = "Passwordi duhet te permbaje se paku 8 karaktere, se paku nje numer, nje shkronje te vogel dhe nje shkronje te madhe!";
+    }
+if((strlen($nameErr)>1) || (strlen( $LastnameErr)>1) || (strlen($usernameErr)>1) || (strlen($passwordErr)>1)){
+    header("location: signup.php");
+}else{
+
     
   // Db dhe escape
   $db = connectDb();
@@ -36,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $db->query($query);
   $functionObj->writeLog($query);
   $functionObj->writeLog('Error: ' . $db->error);
-  header("Location: login.php"); 
+  header("Location: login.php"); }
 } else { ?>
 <!DOCTYPE html>
 <html>
@@ -60,10 +65,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                      <form name=Form1 method="post" action="signup.php" onsignup="return myfunction1()" autocomplete="on"> 
                                 <h2> Sign Up </h2> 
 							
-                                    <input class="long"  name="username" required="required" type="text" placeholder="Username" />                               
-                                    <input class="long"  name="password" required="required" type="password" placeholder="Password"/>                        
-                                    <input  class="name"  name="name" required="required" type="text" placeholder="First Name"/>
-                                    <input  class="name"  name="lastname" required="required" type="text" placeholder="Last Name"/>
+                                    <input class="long"  name="username" type="text" placeholder="Username" /> 
+                                    <?php echo $usernameErr?>                          
+                                    <input class="long"  name="password" type="password" placeholder="Password"/> 
+                                    <?php echo $passwordErr ?>                      
+                                    <input  class="name"  name="name" type="text" placeholder="First Name"/>
+                                    <?php echo $nameErr  ?>                     
+                                    <input  class="name"  name="lastname" type="text" placeholder="Last Name"/>
+                                    <?php echo $LastnameErr?>                      
+
                                           
                                     <input type='file' name='file1' id='file1' />(Optional)
 							
@@ -74,12 +84,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                              
            					<button class="btn-signup" onclick="myfunction1()" type="submit" name="signup" >Sign Up</button>
                             </form>
-                            <?php
-                            foreach ($_FILES as $key=>$value)
-                            {
-                                    
-                            }
-                            ?>
                          </div>
 							
         		<div id="signup-left">
@@ -94,10 +98,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
     </body>
     <?php include ('footer.php'); ?>
-         </html>
-         <?php 
-        header("Location: login.php"); 
-        } ?>
-    
-
-    
+</html>
+            <?php } ?>
