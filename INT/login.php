@@ -29,8 +29,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (checkPassword($password, $dbPassword)) {
       $functionsObj->writeLog("Login valid");
       $_SESSION['username'] = $row['username'];
+      if(!empty($_POST['remember'])){
+        setcookie("username",$username,time()+(365*24*60*60));
+        setcookie("password",$password,time()+(365*24*60*60));
+      }else{
+        if(isset($_COOKIE['username'])){
+          setcookie("username","");
+        }if(isset($_COOKIE['password'])){
+          setcookie("password","");
+        }
+    }
       header("Location: LJ.php"); 
-      echo "Success";
     } else {
     header("Location: login.php"); 
     $functionsObj->writeLog("Login jo-valid");
@@ -64,8 +73,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         ?>
 				<form action ="login.php" method="POST"  autocomplete="on"> 
                                 <h2>Login</h2> 
-                                <input class="long" name="username" type="text" placeholder="Username" required  autofocus >
-                                <input class="short-pass" name="password" type="password" placeholder="Password" required > 
+                                <input class="long" name="username" type="text" placeholder="Username" value="<?php if(isset($_COOKIE['username'])){echo $_COOKIE['username'];} ?>" required  autofocus />
+                                <input class="short-pass" name="password" type="password" placeholder="Password" value="<?php if(isset($_COOKIE['password'])){echo $_COOKIE['password'];} ?>" required />
+                                <input type="checkbox" name="remember" <?php if(isset($_COOKIE['username'])){?>checked<?php }?>/> 
+                                <label>Remember Me</label>
     
                                 <button class="btn-login"  type="submit" name="login">Login</button>	
                 
