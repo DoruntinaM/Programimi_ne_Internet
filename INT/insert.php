@@ -5,6 +5,9 @@ $name=$_POST['productname'];
 $brand=$_POST['brandname'];
 $quantity=$_POST['quantity'];
 
+
+
+
 $con = connectDB();
 
 if($con->connect_error){
