@@ -17,6 +17,16 @@ session_start();
             <ul id="left-navheader">
                 <li>Call Us Now : +383-227-788</li>
                 <li>Email : <a href="mailto:luxury.jewelry@luxjewelry.com">luxury.jewelry@luxjewelry.com </a></li>
+                <li>
+                <?php
+                echo "Today is " . date("l");
+                ?>
+                </li>
+                <li>
+                    <?php
+                    echo "" . date("d/m/Y") . "<br>";
+                    ?>
+                </li>
                 </ul>
                 <ul id="right-navheader">
                 <?php

@@ -35,6 +35,16 @@ function showHint(str) {
 }
 </script>
     </div>
+
+
+
+
+
+
+
+
+
+
     
     
     <style>
@@ -199,9 +209,59 @@ while (list($key, $value) = each ($arr))
 <br>
 <br>
                 </td>
+
+
+
         </table>
+
+        <!-- AJAX POLL -->
+<script>
+function getVote(int) {
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else {  // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("poll").innerHTML=this.responseText;
+    }
+  }
+  xmlhttp.open("GET","poll_vote.php?vote="+int,true);
+  xmlhttp.send();
+}
+</script>
+
+
+<!-- form -->
+
+<div id="poll" align="center">
+<h2>Which do you like best?</h2>
+<form>
+Rings:
+<input type="radio" name="vote" value="0" onclick="getVote(this.value)">
+<br>Earrings:
+<input type="radio" name="vote" value="1" onclick="getVote(this.value)">
+<br>Bracelets:
+<input type="radio" name="vote" value="2" onclick="getVote(this.value)">
+</form>
+</div>
+
+
+
     </div>
     </div>
+
+
+
+
+
+
+
+
+
+
     </body>
                 
                 
