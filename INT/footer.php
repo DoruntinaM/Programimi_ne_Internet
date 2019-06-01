@@ -148,7 +148,7 @@
 
 require('Validation.php');
 
-$mailobj=new Validation('doruntina.murtezaj@gmail.com');
+$mailobj=new Validation('ebajrami721@gmail.com');
 $to = $mailobj->getTo();
 $mailobj->setSubject('Form Submission');
 $subject=$mailobj->getSubject();
