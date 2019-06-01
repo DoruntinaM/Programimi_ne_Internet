@@ -1,10 +1,21 @@
 <?php
+
 require("Database.php");
 require("Functions.php");
-
 $functionsObj = new Functions();
-
 include ('header.php');
+
+require ("Facebook/autoload.php");
+if(isset($_GET['state'])) {
+  $_SESSION['FBRLH_state'] = $_GET['state'];
+}
+$fb = new \Facebook\Facebook([
+  'app_id' => '345652152791880',
+  'app_secret' => '55472bdf18e60b992a86b4dc99fe90d0',
+  'default_graph_version' => 'v3.3',
+  //'default_access_token' => '{access-token}', // optional
+]);
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   include __DIR__ . '\LidhjaDB.php';
   include __DIR__ . '\SaltedHash.php';
@@ -79,6 +90,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <label>Remember Me</label>
     
                                 <button class="btn-login"  type="submit" name="login">Login</button>	
+                                <?php if(empty($access_token)) {
+                                echo "<a href='{$fb->getRedirectLoginHelper()->getLoginUrl("http://localhost/login.php")}'>Login with Facebook </a>";
+                                } 
+                                $access_token = $fb->getRedirectLoginHelper()->getAccessToken();
+                                /*Step 4: Get the graph user*/
+                                if(isset($access_token)) {
+                                    try {
+                                        $response = $fb->get('/me',$access_token);
+                                        $fb_user = $response->getGraphUser();
+                                        $f = $fb_user->getName();
+                                        echo $f;
+                                        $_SESSION['username'] = $f;
+                                        header("location: lj.php");
+                                        //  var_dump($fb_user);
+                                    } catch (\Facebook\Exceptions\FacebookResponseException $e) {
+                                        echo  'Graph returned an error: ' . $e->getMessage();
+                                    } catch (\Facebook\Exceptions\FacebookSDKException $e) {
+                                        // When validation fails or other local issues
+                                        echo 'Facebook SDK returned an error: ' . $e->getMessage();
+                                    }
+                                }
+                                ?>
                 
                             </form>
               
