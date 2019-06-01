@@ -36,7 +36,7 @@ fclose($fp);
 <img src="pictures/poll.png"
 width='<?php echo(100*round($rings/($earrings+$bracelets+$rings),2)); ?>'
 height='20'>
-<?php echo(100*round($rings/($earrings+$bracelets+$rings),2)); ?>
+<?php echo(100*round($rings/($earrings+$bracelets+$rings),2)); ?>%
 </td>
 </tr>
 <tr>
@@ -45,7 +45,7 @@ height='20'>
 <img src="pictures/poll.png"
 width='<?php echo(100*round($earrings/($earrings+$rings+$bracelets),2)); ?>'
 height='20'>
-<?php echo(100*round($earrings/($earrings+$rings+$bracelets),2)); ?>
+<?php echo(100*round($earrings/($earrings+$rings+$bracelets),2)); ?>%
 </td>
 </tr>
 <tr>
@@ -54,7 +54,7 @@ height='20'>
 <img src="pictures/poll.png"
 width='<?php echo(100*round($bracelets/($rings+$earrings+$bracelets),2)); ?>'
 height='20'>
-<?php echo(100*round($bracelets/($rings+$earrings+$bracelets),2)); ?>
+<?php echo(100*round($bracelets/($rings+$earrings+$bracelets),2)); ?>%
 </td>
 </tr>
 </table>
