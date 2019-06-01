@@ -163,3 +163,10 @@ Dikush e ka vizituar signup.php
 Dikush e ka vizituar signup.php
 Login attempt nga: EndritBajrami
 Login valid
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
+INSERT INTO USERS (username,password,fName,Sirname) VALUES ('TinkiWinki', '20d493d409b91546cb05dfc8f1b0087bc3565f79/e30fa0817bfe580a2b97dbf9c8172074cd378d5b', 'tina','murtezaj')
+Error: 
+Dikush e ka vizituar signup.php
+Dikush e ka vizituar signup.php
