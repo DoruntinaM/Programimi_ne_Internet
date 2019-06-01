@@ -2,6 +2,7 @@
 <html>
 
   <?php include ('header.php'); ?>
+ 
    
 
     <body>
@@ -170,9 +171,8 @@
             </div>
         </div>
         <br>
-        <!-- postimi i nje komenti -->
-
-        <form action=" " id="frmComment" method="post">
+                                                                    <!-- postimi i nje komenti -->
+                                                                    <form action=" " id="frmComment" method="post">
 	<div class="row">
 		<label> Name: </label> <span id="name-info"></span><input
 			class="form-field" id="name" type="text" name="user">
@@ -217,7 +217,7 @@ while ($row = $result->fetch_array(MYSQLI_ASSOC)) // using prepared statement
 			onclick="deletecomment(<?php echo $row["id"];?>)">Delete</div>
 	</div>
 <?php
-
+}
 ?>
 </div>
 
@@ -294,9 +294,16 @@ while ($row = $result->fetch_array(MYSQLI_ASSOC)) // using prepared statement
      });
     </script>
 
+
+                                                                  
+
     </body>
     
+
     <?php include ('footer.php'); 
-    }?>
-    
-    </html>
+?>
+
+</html>
+
+
+  

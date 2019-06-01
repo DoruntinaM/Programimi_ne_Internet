@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 
+
         <?php include ('header.php'); ?>
 <body>
     <head>
@@ -89,7 +90,6 @@ echo trim($str,"ABCABC!");
   <br>
 
   <hr>
-
 </div>
 
 <div class="row">
